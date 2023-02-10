@@ -1,0 +1,19 @@
+SERVO 1:
+    pin 3 -> servo controller
+    pin 2 -> right direction input
+    pin 4 -> left direction input
+SERVO 2:
+    pin 9 -> servo controller
+    pin 7 -> right direction input
+    pin 8 -> left direction input
+
+MOTOR 1:
+    pin A0 -> speed input
+    pin 5 -> speed controller
+    pin A2 -> direction input
+    pin 11 -> direction controller
+MOTOR 2:
+    pin A1 -> speed input
+    pin 6 -> speed controller
+    pin A3 -> direction input
+    pin 12 -> direction controller

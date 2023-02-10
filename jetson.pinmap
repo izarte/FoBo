@@ -1,0 +1,11 @@
+SERVO 1:
+    pin 11 (50) -> right direction controller
+    pin 12 (79)-> left direction controller
+SERVO 2:
+    pin 15 (194) -> right direction controller
+    pin 16 (232) -> left direction controller
+
+MOTOR 1:
+    pin 32 (168) -> speed controller
+MOTOR 2:
+    pin 33 (38) -> speed controller
