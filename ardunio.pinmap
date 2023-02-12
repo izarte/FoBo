@@ -10,10 +10,13 @@ SERVO 2:
 MOTOR 1:
     pin A0 -> speed input
     pin 5 -> speed controller
-    pin A2 -> direction input
+    pin A1 -> direction input
     pin 11 -> direction controller
 MOTOR 2:
-    pin A1 -> speed input
+    pin A2 -> speed input
     pin 6 -> speed controller
     pin A3 -> direction input
     pin 12 -> direction controller
+
+min delay 400   more speed
+max delay 1000  less speed
