@@ -7,5 +7,7 @@ SERVO 2:
 
 MOTOR 1:
     pin 32 (168) -> speed controller
+    pin 31 (200) -> direction controller
 MOTOR 2:
     pin 33 (38) -> speed controller
+    pin 35 (76) -> direction controller
