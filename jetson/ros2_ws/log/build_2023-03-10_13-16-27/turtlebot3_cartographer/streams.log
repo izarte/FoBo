@@ -1,0 +1,49 @@
+[0.075s] Invoking command in '/catkin_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake /catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/turtlebot3_cartographer
+[0.613s] -- The C compiler identification is GNU 9.4.0
+[0.614s] -- The CXX compiler identification is GNU 9.4.0
+[0.614s] -- Check for working C compiler: /usr/bin/cc
+[0.614s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.614s] -- Detecting C compiler ABI info
+[0.769s] -- Detecting C compiler ABI info - done
+[0.799s] -- Detecting C compile features
+[0.799s] -- Detecting C compile features - done
+[0.805s] -- Check for working CXX compiler: /usr/bin/c++
+[1.002s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.004s] -- Detecting CXX compiler ABI info
+[1.321s] -- Detecting CXX compiler ABI info - done
+[1.355s] -- Detecting CXX compile features
+[1.357s] -- Detecting CXX compile features - done
+[1.367s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.434s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.435s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.004s] -- Configuring done
+[2.008s] -- Generating done
+[2.010s] -- Build files have been written to: /catkin_ws/build/turtlebot3_cartographer
+[2.027s] Invoked command in '/catkin_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake /catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_cartographer -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/turtlebot3_cartographer
+[2.029s] Invoking command in '/catkin_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --build /catkin_ws/build/turtlebot3_cartographer -- -j8 -l8
+[2.226s] Invoked command in '/catkin_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --build /catkin_ws/build/turtlebot3_cartographer -- -j8 -l8
+[2.974s] Invoking command in '/catkin_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --install /catkin_ws/build/turtlebot3_cartographer
+[3.147s] -- Install configuration: ""
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config/turtlebot3_lds_2d.lua
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/cartographer.launch.py
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/occupancy_grid.launch.py
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz/tb3_cartographer.rviz
+[3.148s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.sh
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.dsv
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.sh
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.dsv
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.bash
+[3.149s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.sh
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.zsh
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.dsv
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.dsv
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/ament_index/resource_index/packages/turtlebot3_cartographer
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig.cmake
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig-version.cmake
+[3.150s] -- Installing: /catkin_ws/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.xml
+[3.157s] Invoked command in '/catkin_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --install /catkin_ws/build/turtlebot3_cartographer

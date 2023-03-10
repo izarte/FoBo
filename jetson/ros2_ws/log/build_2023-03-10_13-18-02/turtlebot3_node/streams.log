@@ -1,0 +1,93 @@
+[0.127s] Invoking command in '/catkin_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake /catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/turtlebot3_node
+[0.622s] -- The C compiler identification is GNU 9.4.0
+[0.622s] -- The CXX compiler identification is GNU 9.4.0
+[0.622s] -- Check for working C compiler: /usr/bin/cc
+[0.622s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.622s] -- Detecting C compiler ABI info
+[0.658s] -- Detecting C compiler ABI info - done
+[0.681s] -- Detecting C compile features
+[0.690s] -- Detecting C compile features - done
+[0.697s] -- Check for working CXX compiler: /usr/bin/c++
+[0.922s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.929s] -- Detecting CXX compiler ABI info
+[1.188s] -- Detecting CXX compiler ABI info - done
+[1.211s] -- Detecting CXX compile features
+[1.212s] -- Detecting CXX compile features - done
+[1.227s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.286s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.286s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.602s] -- Found dynamixel_sdk: 3.7.40 (/catkin_ws/install/dynamixel_sdk/share/dynamixel_sdk/cmake)
+[1.610s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.706s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.731s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.920s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.970s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.117s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.240s] -- Found message_filters: 3.2.5 (/opt/ros/foxy/share/message_filters/cmake)
+[2.248s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.341s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.423s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.427s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.430s] -- Looking for pthread.h
+[2.516s] -- Looking for pthread.h - found
+[2.516s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.621s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.621s] -- Looking for pthread_create in pthreads
+[2.699s] -- Looking for pthread_create in pthreads - not found
+[2.699s] -- Looking for pthread_create in pthread
+[2.792s] -- Looking for pthread_create in pthread - found
+[2.794s] -- Found Threads: TRUE  
+[2.993s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[3.087s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[3.106s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[3.125s] -- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+[3.556s] -- Found turtlebot3_msgs: 2.2.1 (/catkin_ws/install/turtlebot3_msgs/share/turtlebot3_msgs/cmake)
+[3.774s] -- Configuring done
+[3.815s] -- Generating done
+[3.817s] -- Build files have been written to: /catkin_ws/build/turtlebot3_node
+[3.831s] Invoked command in '/catkin_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake /catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/turtlebot3_node
+[3.835s] Invoking command in '/catkin_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /catkin_ws/build/turtlebot3_node -- -j8 -l8
+[3.891s] [35m[1mScanning dependencies of target turtlebot3_node_lib[0m
+[4.001s] [ 14%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/sound.cpp.o[0m
+[4.001s] [ 14%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/reset.cpp.o[0m
+[4.004s] [ 21%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/motor_power.cpp.o[0m
+[4.008s] [ 35%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/turtlebot3.cpp.o[0m
+[4.009s] [ 35%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/battery_state.cpp.o[0m
+[4.018s] [ 42%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/dynamixel_sdk_wrapper.cpp.o[0m
+[4.025s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/odometry.cpp.o[0m
+[4.049s] [ 57%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/diff_drive_controller.cpp.o[0m
+[5.648s] [ 64%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/imu.cpp.o[0m
+[8.484s] [ 71%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/joint_state.cpp.o[0m
+[11.003s] [ 78%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/sensor_state.cpp.o[0m
+[21.762s] [ 85%] [32m[1mLinking CXX static library libturtlebot3_node_lib.a[0m
+[22.395s] [ 85%] Built target turtlebot3_node_lib
+[22.421s] [35m[1mScanning dependencies of target turtlebot3_ros[0m
+[22.482s] [ 92%] [32mBuilding CXX object CMakeFiles/turtlebot3_ros.dir/src/node_main.cpp.o[0m
+[24.872s] [100%] [32m[1mLinking CXX executable turtlebot3_ros[0m
+[26.115s] [100%] Built target turtlebot3_ros
+[26.129s] Invoked command in '/catkin_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /catkin_ws/build/turtlebot3_node -- -j8 -l8
+[26.189s] Invoking command in '/catkin_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /catkin_ws/build/turtlebot3_node
+[26.200s] -- Install configuration: ""
+[26.200s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/param
+[26.200s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+[26.204s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+[26.204s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+[26.205s] -- Installing: /catkin_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+[26.212s] -- Set runtime path of "/catkin_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros" to ""
+[26.213s] -- Installing: /catkin_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+[26.213s] -- Installing: /catkin_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+[26.213s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+[26.213s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+[26.213s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+[26.214s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[26.215s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+[26.215s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+[26.215s] -- Installing: /catkin_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml
+[26.222s] Invoked command in '/catkin_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy LD_LIBRARY_PATH=/catkin_ws/install/turtlebot3_msgs/lib:/catkin_ws/install/dynamixel_sdk/lib:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/catkin_ws/install/turtlebot3_msgs/lib/python3.8/site-packages:/catkin_ws/install/turtlebot3_example/lib/python3.8/site-packages:/catkin_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.8/site-packages:/catkin_ws/build/turtlebot3_teleop:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /catkin_ws/build/turtlebot3_node

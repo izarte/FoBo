@@ -1,0 +1,21 @@
+[1.390s] Invoking command in '/catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_teleop': PYTHONPATH=/catkin_ws/build/turtlebot3_teleop/prefix_override:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/turtlebot3_teleop build --build-base /catkin_ws/build/turtlebot3_teleop/build install --record /catkin_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed
+[1.794s] running egg_info
+[1.794s] writing ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/PKG-INFO
+[1.797s] writing dependency_links to ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/dependency_links.txt
+[1.798s] writing entry points to ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/entry_points.txt
+[1.798s] writing requirements to ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/requires.txt
+[1.798s] writing top-level names to ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/top_level.txt
+[1.870s] reading manifest file '../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[1.871s] writing manifest file '../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info/SOURCES.txt'
+[1.871s] running build
+[1.872s] running build_py
+[1.872s] running install
+[1.874s] running install_lib
+[1.878s] running install_data
+[1.878s] running install_egg_info
+[1.883s] removing '/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages/turtlebot3_teleop-2.1.4-py3.8.egg-info' (and everything under it)
+[1.883s] Copying ../../../../build/turtlebot3_teleop/turtlebot3_teleop.egg-info to /catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages/turtlebot3_teleop-2.1.4-py3.8.egg-info
+[1.886s] running install_scripts
+[1.925s] Installing teleop_keyboard script to /catkin_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[1.926s] writing list of installed files to '/catkin_ws/build/turtlebot3_teleop/install.log'
+[2.060s] Invoked command in '/catkin_ws/src/turtlebot3/turtlebot3/turtlebot3_teleop' returned '0': PYTHONPATH=/catkin_ws/build/turtlebot3_teleop/prefix_override:/catkin_ws/install/turtlebot3_teleop/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../../build/turtlebot3_teleop build --build-base /catkin_ws/build/turtlebot3_teleop/build install --record /catkin_ws/build/turtlebot3_teleop/install.log --single-version-externally-managed

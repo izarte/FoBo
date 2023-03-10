@@ -1,0 +1,15 @@
+/catkin_ws/install/turtlebot3/share/ament_index/resource_index/package_run_dependencies/turtlebot3
+/catkin_ws/install/turtlebot3/share/ament_index/resource_index/parent_prefix_path/turtlebot3
+/catkin_ws/install/turtlebot3/share/turtlebot3/environment/ament_prefix_path.sh
+/catkin_ws/install/turtlebot3/share/turtlebot3/environment/ament_prefix_path.dsv
+/catkin_ws/install/turtlebot3/share/turtlebot3/environment/path.sh
+/catkin_ws/install/turtlebot3/share/turtlebot3/environment/path.dsv
+/catkin_ws/install/turtlebot3/share/turtlebot3/local_setup.bash
+/catkin_ws/install/turtlebot3/share/turtlebot3/local_setup.sh
+/catkin_ws/install/turtlebot3/share/turtlebot3/local_setup.zsh
+/catkin_ws/install/turtlebot3/share/turtlebot3/local_setup.dsv
+/catkin_ws/install/turtlebot3/share/turtlebot3/package.dsv
+/catkin_ws/install/turtlebot3/share/ament_index/resource_index/packages/turtlebot3
+/catkin_ws/install/turtlebot3/share/turtlebot3/cmake/turtlebot3Config.cmake
+/catkin_ws/install/turtlebot3/share/turtlebot3/cmake/turtlebot3Config-version.cmake
+/catkin_ws/install/turtlebot3/share/turtlebot3/package.xml

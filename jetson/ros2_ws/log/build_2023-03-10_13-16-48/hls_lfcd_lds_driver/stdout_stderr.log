@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target hlds_laser_publisher[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/hlds_laser_publisher.dir/src/hlds_laser_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable hlds_laser_publisher[0m
+[100%] Built target hlds_laser_publisher

@@ -1,0 +1,40 @@
+[0.088s] Invoking command in '/catkin_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake /catkin_ws/src/utils/hls_lfcd_lds_driver -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/hls_lfcd_lds_driver
+[0.616s] -- The C compiler identification is GNU 9.4.0
+[0.617s] -- The CXX compiler identification is GNU 9.4.0
+[0.617s] -- Check for working C compiler: /usr/bin/cc
+[0.617s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.617s] -- Detecting C compiler ABI info
+[0.732s] -- Detecting C compiler ABI info - done
+[0.784s] -- Detecting C compile features
+[0.784s] -- Detecting C compile features - done
+[0.794s] -- Check for working CXX compiler: /usr/bin/c++
+[0.988s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.992s] -- Detecting CXX compiler ABI info
+[1.209s] -- Detecting CXX compiler ABI info - done
+[1.246s] -- Detecting CXX compile features
+[1.247s] -- Detecting CXX compile features - done
+[1.253s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.335s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.335s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.808s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.918s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.935s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.151s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.229s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.806s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.813s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.818s] -- Looking for pthread.h
+[3.270s] -- Looking for pthread.h - found
+[3.270s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.675s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[3.675s] -- Looking for pthread_create in pthreads
+[3.907s] -- Looking for pthread_create in pthreads - not found
+[3.907s] -- Looking for pthread_create in pthread
+[4.205s] -- Looking for pthread_create in pthread - found
+[4.205s] -- Found Threads: TRUE  
+[4.573s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.868s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system 
+[5.012s] -- Configuring done
+[5.031s] -- Generating done
+[5.035s] -- Build files have been written to: /catkin_ws/build/hls_lfcd_lds_driver

@@ -1,0 +1,17 @@
+[0.531s] Invoking command in '/catkin_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/catkin_ws/install/turtlebot3_description:/catkin_ws/install/turtlebot3:/catkin_ws/install/turtlebot3_simulations:/catkin_ws/install/turtlebot3_bringup:/catkin_ws/install/turtlebot3_node:/catkin_ws/install/turtlebot3_fake_node:/catkin_ws/install/turtlebot3_msgs:/catkin_ws/install/turtlebot3_gazebo:/catkin_ws/install/hls_lfcd_lds_driver:/catkin_ws/install/dynamixel_sdk_examples:/catkin_ws/install/dynamixel_sdk_custom_interfaces:/catkin_ws/install/dynamixel_sdk:/catkin_ws/install/turtlebot3_navigation2:/catkin_ws/install/turtlebot3_cartographer:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --build /catkin_ws/build/turtlebot3_gazebo -- -j8 -l8
+[0.645s] [35m[1mScanning dependencies of target obstacle2[0m
+[0.664s] [35m[1mScanning dependencies of target obstacles[0m
+[0.692s] [35m[1mScanning dependencies of target turtlebot3_drive[0m
+[0.701s] [35m[1mScanning dependencies of target obstacle1[0m
+[0.996s] [ 12%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[1.010s] [ 25%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle2.cc.o[0m
+[1.081s] [ 37%] [32mBuilding CXX object CMakeFiles/obstacles.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacles.cc.o[0m
+[1.100s] [ 50%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/models/turtlebot3_dqn_world/obstacle_plugin/obstacle1.cc.o[0m
+[19.766s] [ 62%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[20.346s] [ 62%] Built target turtlebot3_drive
+[22.617s] [ 75%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[23.205s] [ 75%] Built target obstacle2
+[23.544s] [ 87%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[23.945s] [ 87%] Built target obstacles
+[24.013s] [100%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[24.325s] [100%] Built target obstacle1

@@ -1,0 +1,16 @@
+[1.257s] Invoking command in '/catkin_ws/src/fobo_simulation': PYTHONPATH=/catkin_ws/build/fobo_simulation/prefix_override:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fobo_simulation build --build-base /catkin_ws/build/fobo_simulation/build install --record /catkin_ws/build/fobo_simulation/install.log --install-scripts $base/lib/fobo_simulation --single-version-externally-managed
+[1.509s] running egg_info
+[1.510s] writing ../../build/fobo_simulation/fobo_simulation.egg-info/PKG-INFO
+[1.510s] writing dependency_links to ../../build/fobo_simulation/fobo_simulation.egg-info/dependency_links.txt
+[1.511s] writing entry points to ../../build/fobo_simulation/fobo_simulation.egg-info/entry_points.txt
+[1.511s] writing requirements to ../../build/fobo_simulation/fobo_simulation.egg-info/requires.txt
+[1.512s] writing top-level names to ../../build/fobo_simulation/fobo_simulation.egg-info/top_level.txt
+[1.557s] reading manifest file '../../build/fobo_simulation/fobo_simulation.egg-info/SOURCES.txt'
+[1.562s] writing manifest file '../../build/fobo_simulation/fobo_simulation.egg-info/SOURCES.txt'
+[1.563s] running build
+[1.563s] running build_py
+[1.563s] running install
+[1.564s] running install_lib
+[1.564s] running install_data
+[1.566s] error: can't copy 'models/turtlebot3_burger': doesn't exist or not a regular file
+[1.595s] Invoked command in '/catkin_ws/src/fobo_simulation' returned '1': PYTHONPATH=/catkin_ws/build/fobo_simulation/prefix_override:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fobo_simulation build --build-base /catkin_ws/build/fobo_simulation/build install --record /catkin_ws/build/fobo_simulation/install.log --install-scripts $base/lib/fobo_simulation --single-version-externally-managed

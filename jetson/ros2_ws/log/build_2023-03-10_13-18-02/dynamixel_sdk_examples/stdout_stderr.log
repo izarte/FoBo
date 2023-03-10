@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target read_write_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable read_write_node[0m
+[100%] Built target read_write_node
+-- Install configuration: ""
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node
+-- Set runtime path of "/catkin_ws/install/dynamixel_sdk_examples/lib/dynamixel_sdk_examples/read_write_node" to ""
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/package_run_dependencies/dynamixel_sdk_examples
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/parent_prefix_path/dynamixel_sdk_examples
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.sh
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/ament_prefix_path.dsv
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.sh
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/environment/path.dsv
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.bash
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.sh
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.zsh
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/local_setup.dsv
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.dsv
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/ament_index/resource_index/packages/dynamixel_sdk_examples
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig.cmake
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/cmake/dynamixel_sdk_examplesConfig-version.cmake
+-- Installing: /catkin_ws/install/dynamixel_sdk_examples/share/dynamixel_sdk_examples/package.xml

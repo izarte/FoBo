@@ -1,0 +1,33 @@
+[1.993s] Invoking command in '/catkin_ws/src/fobo_simulation': PYTHONPATH=/catkin_ws/build/fobo_simulation/prefix_override:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fobo_simulation build --build-base /catkin_ws/build/fobo_simulation/build install --record /catkin_ws/build/fobo_simulation/install.log --install-scripts $base/lib/fobo_simulation --single-version-externally-managed
+[2.373s] running egg_info
+[2.374s] creating ../../build/fobo_simulation/fobo_simulation.egg-info
+[2.375s] writing ../../build/fobo_simulation/fobo_simulation.egg-info/PKG-INFO
+[2.376s] writing dependency_links to ../../build/fobo_simulation/fobo_simulation.egg-info/dependency_links.txt
+[2.378s] writing entry points to ../../build/fobo_simulation/fobo_simulation.egg-info/entry_points.txt
+[2.378s] writing requirements to ../../build/fobo_simulation/fobo_simulation.egg-info/requires.txt
+[2.378s] writing top-level names to ../../build/fobo_simulation/fobo_simulation.egg-info/top_level.txt
+[2.379s] writing manifest file '../../build/fobo_simulation/fobo_simulation.egg-info/SOURCES.txt'
+[2.446s] reading manifest file '../../build/fobo_simulation/fobo_simulation.egg-info/SOURCES.txt'
+[2.448s] writing manifest file '../../build/fobo_simulation/fobo_simulation.egg-info/SOURCES.txt'
+[2.448s] running build
+[2.449s] running build_py
+[2.449s] creating /catkin_ws/build/fobo_simulation/build
+[2.450s] creating /catkin_ws/build/fobo_simulation/build/lib
+[2.450s] creating /catkin_ws/build/fobo_simulation/build/lib/fobo_simulation
+[2.451s] copying fobo_simulation/__init__.py -> /catkin_ws/build/fobo_simulation/build/lib/fobo_simulation
+[2.452s] copying fobo_simulation/state_publisher.py -> /catkin_ws/build/fobo_simulation/build/lib/fobo_simulation
+[2.453s] running install
+[2.459s] running install_lib
+[2.459s] creating /catkin_ws/install/fobo_simulation/lib/python3.8/site-packages/fobo_simulation
+[2.460s] copying /catkin_ws/build/fobo_simulation/build/lib/fobo_simulation/__init__.py -> /catkin_ws/install/fobo_simulation/lib/python3.8/site-packages/fobo_simulation
+[2.460s] copying /catkin_ws/build/fobo_simulation/build/lib/fobo_simulation/state_publisher.py -> /catkin_ws/install/fobo_simulation/lib/python3.8/site-packages/fobo_simulation
+[2.460s] byte-compiling /catkin_ws/install/fobo_simulation/lib/python3.8/site-packages/fobo_simulation/__init__.py to __init__.cpython-38.pyc
+[2.460s] byte-compiling /catkin_ws/install/fobo_simulation/lib/python3.8/site-packages/fobo_simulation/state_publisher.py to state_publisher.cpython-38.pyc
+[2.461s] running install_data
+[2.462s] creating /catkin_ws/install/fobo_simulation/share/ament_index
+[2.462s] creating /catkin_ws/install/fobo_simulation/share/ament_index/resource_index
+[2.463s] creating /catkin_ws/install/fobo_simulation/share/ament_index/resource_index/packages
+[2.463s] copying resource/fobo_simulation -> /catkin_ws/install/fobo_simulation/share/ament_index/resource_index/packages
+[2.464s] error: can't copy 'models/turtlebot3_burger': doesn't exist or not a regular file
+[2.466s] copying package.xml -> /catkin_ws/install/fobo_simulation/share/fobo_simulation
+[2.523s] Invoked command in '/catkin_ws/src/fobo_simulation' returned '1': PYTHONPATH=/catkin_ws/build/fobo_simulation/prefix_override:/catkin_ws/install/fobo_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/fobo_simulation build --build-base /catkin_ws/build/fobo_simulation/build install --record /catkin_ws/build/fobo_simulation/install.log --install-scripts $base/lib/fobo_simulation --single-version-externally-managed
