@@ -1,9 +1,9 @@
+/catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/turtlebot3_state_publisher.launch.py
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/rviz2.launch.py
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/robot.launch.py
-/catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/launch/turtlebot3_state_publisher.launch.py
+/catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/param/waffle.yaml
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/param/waffle_pi.yaml
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/param/burger.yaml
-/catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/param/waffle.yaml
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/script/create_udev_rules
 /catkin_ws/install/turtlebot3_bringup/share/turtlebot3_bringup/script/99-turtlebot3-cdc.rules
 /catkin_ws/install/turtlebot3_bringup/share/ament_index/resource_index/package_run_dependencies/turtlebot3_bringup

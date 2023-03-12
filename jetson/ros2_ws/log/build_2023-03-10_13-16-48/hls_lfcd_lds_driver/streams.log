@@ -1,5 +1,0 @@
-[0.096s] Invoking command in '/catkin_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --build /catkin_ws/build/hls_lfcd_lds_driver -- -j8 -l8
-[0.571s] [35m[1mScanning dependencies of target hlds_laser_publisher[0m
-[0.574s] [ 50%] [32mBuilding CXX object CMakeFiles/hlds_laser_publisher.dir/src/hlds_laser_publisher.cpp.o[0m
-[13.373s] [100%] [32m[1mLinking CXX executable hlds_laser_publisher[0m
-[14.675s] [100%] Built target hlds_laser_publisher

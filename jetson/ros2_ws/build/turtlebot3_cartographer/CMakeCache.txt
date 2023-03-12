@@ -239,7 +239,7 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 PYTHON_VERSION:STRING=
 
 //Name of the computer/site where compile is being run
-SITE:STRING=inigo
+SITE:STRING=DESKTOP-UAC0QHI
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/foxy/share/ament_cmake/cmake

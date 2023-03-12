@@ -1,1 +1,0 @@
-Invoking command in '/catkin_ws/build/hls_lfcd_lds_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake --build /catkin_ws/build/hls_lfcd_lds_driver -- -j8 -l8

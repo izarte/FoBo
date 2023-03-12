@@ -1,1 +1,0 @@
-Invoking command in '/catkin_ws/build/turtlebot3_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/catkin_ws/install/turtlebot3_example:/catkin_ws/install/turtlebot3_teleop:/catkin_ws/install/fobo_simulation:/opt/ros/foxy /usr/bin/cmake /catkin_ws/src/turtlebot3/turtlebot3_msgs -DCMAKE_INSTALL_PREFIX=/catkin_ws/install/turtlebot3_msgs

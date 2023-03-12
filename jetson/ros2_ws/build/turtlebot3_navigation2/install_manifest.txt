@@ -1,9 +1,9 @@
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/launch/navigation2.launch.py
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.pgm
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/map/turtlebot3_world.yaml
+/catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle.yaml
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle_pi.yaml
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/burger.yaml
-/catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/param/waffle.yaml
 /catkin_ws/install/turtlebot3_navigation2/share/turtlebot3_navigation2/rviz/tb3_navigation2.rviz
 /catkin_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/package_run_dependencies/turtlebot3_navigation2
 /catkin_ws/install/turtlebot3_navigation2/share/ament_index/resource_index/parent_prefix_path/turtlebot3_navigation2
