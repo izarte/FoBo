@@ -22,6 +22,8 @@
         </geometry>
       </visual>
 
+
+
       <collision name="base_collision">
         <pose>0.1175 0.5 0.5 0 0 0</pose>
         <geometry>
@@ -90,7 +92,7 @@
     <joint name="wheel_right_joint" type="revolute">
       <parent>base_link</parent>
       <child>wheel_right_link</child>
-      <pose>0 0.4 0.05 0 1.57 0</pose>
+      <pose>0.01 0.4 0.05 0 1.57 0</pose>
       <axis>
         <xyz>0 0 1</xyz>
       </axis>
@@ -98,7 +100,7 @@
 
     <link name="wheel_right_link">
       <collision name="wheel_right_collision">
-        <pose>0 0.4 0.05 0 1.57 0</pose>
+        <pose>0.01 0.4 0.05 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <radius>0.033</radius>
@@ -130,7 +132,7 @@
       </collision>
 
       <visual name="wheel_right_visual">
-        <pose>0 0.4 0.05 0 1.57 0</pose>
+        <pose>0.01 0.4 0.05 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <radius>0.033</radius>
@@ -141,19 +143,23 @@
     </link>
 
 
-    <joint name="wheel_front_joint" type="fixed">
+    <joint name="wheel_front_joint" type="revolute">
       <parent>base_link</parent>
       <child>wheel_front_link</child>
-      <pose>0.1175 0.08 0.05 0 0 0</pose>
+      <pose>0.1157 0.08 0.05 0 1.57 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
     </joint>
 
     <link name="wheel_front_link">
       <collision name="wheel_front_collision">
-        <pose>0.1175 0.08 0.05 0 0 0</pose>
+        <pose>0.1157 0.08 0.05 0 1.57 0</pose>
         <geometry>
-          <sphere>
+          <cylinder>
             <radius>0.033</radius>
-          </sphere>
+            <length>0.018</length>
+          </cylinder>
         </geometry>
         <surface>
           <!-- This friction pamareter don't contain reliable data!! -->
@@ -180,11 +186,12 @@
       </collision>
 
       <visual name="wheel_front_visual">
-        <pose>0.1175 0.08 0.05 0 0 0</pose>
+        <pose>0.1157 0.08 0.05 0 1.57 0</pose>
         <geometry>
-          <sphere>
+          <cylinder>
             <radius>0.033</radius>
-          </sphere>
+            <length>0.018</length>
+          </cylinder>
         </geometry>
       </visual>
     </link>
