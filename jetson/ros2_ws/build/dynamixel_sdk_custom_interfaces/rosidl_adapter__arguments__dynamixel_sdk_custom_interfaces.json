@@ -1,7 +1,0 @@
-{
-  "package_name": "dynamixel_sdk_custom_interfaces",
-  "non_idl_tuples": [
-    "/catkin_ws/src/utils/DynamixelSDK/dynamixel_sdk_custom_interfaces:msg/SetPosition.msg",
-    "/catkin_ws/src/utils/DynamixelSDK/dynamixel_sdk_custom_interfaces:srv/GetPosition.srv"
-  ]
-}

@@ -1,9 +1,0 @@
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/install/strip.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/install/local.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/install.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/list_install_components.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/rebuild_cache.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/edit_cache.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/test.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/turtlebot3_bringup_uninstall.dir
-/catkin_ws/build/turtlebot3_bringup/CMakeFiles/uninstall.dir
