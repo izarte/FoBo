@@ -7,14 +7,27 @@ from fobo.msg import Velocity
 
 
 class Motor():
-	def __init__(self, pin, dir):
+	def __init__(self, pin, direction):
 		GPIO.setup(pin, GPIO.OUT)
 		self.pwm = GPIO.PWM(pin, 490)
+		self.dir = direction
 		self.dc = 0
-		GPIO.setup(dir, GPIO.OUT, initial=GPIO.HIGH)
+		GPIO.setup(self.dir, GPIO.OUT, initial=GPIO.HIGH)
+		GPIO.output(self.dir, GPIO.HIGH)
+		self.pwm.start(self.dc)
+
+	def __del__(self):
+		self.pwm.stop()
 
 	def set_speed(self, dc):
 		self.dc = dc
+		if self.dc < 0:
+			GPIO.output(self.dir, GPIO.LOW)
+			self.dc = -self.dc
+		else:
+			GPIO.output(self.dir, GPIO.HIGH)
+		if self.dc > 100:
+			self.dc = 100
 		self.pwm.ChangeDutyCycle(self.dc)
 
 
@@ -38,24 +51,21 @@ class FoboMovement(Node):
 	def read_velocity(self, msg):
 		self.velocity['linear'] = msg.linear
 		self.velocity['angular'] = msg.angular
-	
-	def move(self):
 		left_wheel_speed = self.velocity['linear'] - ((self.L/2) * self.velocity['angular']) / self.r
-		left_wheel_speed = self.velocity['linear'] + ((self.L/2) * self.velocity['angular']) / self.r
+		right_wheel_speed = self.velocity['linear'] + ((self.L/2) * self.velocity['angular']) / self.r
 		self.left_motor.set_speed(left_wheel_speed)
 		self.right_motor.set_speed(right_wheel_speed)
+		print(f"left: {left_wheel_speed} right: {right_wheel_speed}")
+
 
 def main():
 	rclpy.init()
 	node = FoboMovement()
-	rate = node.create_rate(2)
 	try:
-		while rclpy.ok():
-			node.move()
-			rate.sleep
+		rclpy.spin(node)
 	except KeyboardInterrupt:
-		pass
-	rclpy.shutdown()
+		rclpy.shutdown()
+		GPIO.cleanup()
 
 if __name__ == '__main__':
 	main()

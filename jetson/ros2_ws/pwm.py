@@ -39,8 +39,8 @@ print("Interface to control 2 steppers and 2 servos")
 print("Usage:\ncommand motor number")
 print("Possible commands:\n")
 print("Stepper control\n\ti: increase speed\n\tk: decrease speed\n\tf: go forward\n\tb: go backard")
-print("Servo control\n\tr: turn incr\n\tl: turn dir\n\ts: stop turning")
-print("Example motor: i1 d2\nExaple servo r2 s1")
+print("Servo control\n\ts")
+print("Example motor: i1 d2\nExaple servo s2")
 print("\nPress Ctl C to quit \n")
 dc1 = 0
 dc2 = 0

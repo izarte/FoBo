@@ -30,11 +30,13 @@ find_package(rosidl_default_generators REQUIRED)
 
 install(PROGRAMS 
   scripts/move_control.py
+  scripts/camera_control.py
   DESTINATION lib/${PROJECT_NAME}/
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Velocity.msg"
+  "msg/CameraPose.msg"
  )
 
 if(BUILD_TESTING)
