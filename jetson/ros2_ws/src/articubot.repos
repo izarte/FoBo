@@ -1,0 +1,4 @@
+repositories:
+  joshnewans/articubot_one:
+    type: git
+    url: https://github.com/joshnewans/articubot_one.git

@@ -34,7 +34,7 @@
         </geometry>
       </visual>
 
-      <visual name='fornt_up'>
+      <visual name='front_up'>
       <pose>-0.15 0 .1 0 0 0</pose>
         <geometry>
           <box>
@@ -183,7 +183,7 @@
       </sensor>
     </link>
 
-    <joint type="revolute" name="camera_joint">
+    <joint type="revolute" name="camera_base_joint">
       <pose>-0.15 0 .3 0 0 0</pose>
       <parent>base_link</parent>
       <child>camera_link</child>
@@ -192,6 +192,22 @@
       </axis>
     </joint>
 
+    <transmission name="camera_base_tran">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="camera_base_joint">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="camera_base">
+        <mechanicalReduction>1.0</mechanicalReduction>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/fobo</robotNamespace>
+      </plugin>
+    </gazebo>
 
     <!-- Controls the differential drive robot -->
     <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>

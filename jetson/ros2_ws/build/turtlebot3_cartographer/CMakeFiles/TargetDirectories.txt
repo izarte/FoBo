@@ -1,9 +1,0 @@
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/install/strip.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/install/local.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/install.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/list_install_components.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/rebuild_cache.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/edit_cache.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/test.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/turtlebot3_cartographer_uninstall.dir
-/catkin_ws/build/turtlebot3_cartographer/CMakeFiles/uninstall.dir
