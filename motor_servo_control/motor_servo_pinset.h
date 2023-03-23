@@ -11,7 +11,8 @@ void init_motors();
 
 // servo.cpp
 void servo_control();
-int modify_angle(int *angle, int delta);
+void modify_angle(int *angle, int delta);
+void blinkLed(int t);
 
 // Stepper
 void motors_control();
@@ -33,12 +34,12 @@ const int MOTOR_2_DIRECTION_INPUT = A3;         // Jetson 35 (76)
 
 // Servo 1 pimap
 const int PIN_SERVO_1 = 3;
-const int SERVO_1_RIGHT = 2;                    // Jetson 11 (50)
-const int SERVO_1_LEFT = 4;                     // Jetson 12 (79)
+const int SERVO_1_INCR = 2;                    // Jetson 11 (50)
+const int SERVO_1_DIR = 4;                     // Jetson 12 (79)
 // Servo 2 pinmap
 const int PIN_SERVO_2 = 9;
-const int SERVO_2_RIGHT = 7;                    // Jetson 15 (194)
-const int SERVO_2_LEFT = 8;                     // Jetson 16 (232)
+const int SERVO_2_INCR = 7;                    // Jetson 15 (194)
+const int SERVO_2_DIR = 8;                     // Jetson 16 (232)
 
 const int delta = 10;
 

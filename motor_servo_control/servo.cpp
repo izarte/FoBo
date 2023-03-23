@@ -1,58 +1,83 @@
 #include "motor_servo_pinset.h"
 
-int read_right_1 = 0;
-int read_left_1 = 0;
-int read_right_2 = 0;
-int read_left_2 = 0;
-
 extern Servo servo_1;
 extern Servo servo_2;
 extern int angle_servo_1;
 extern int angle_servo_2;
 
-int last_check = millis();
+int last_servo_1 = millis();
+int last_servo_2 = millis();
+
+int last_read_incr_1 = 1;
+int last_read_incr_2 = 1;
+
+int read_incr_1 = 0;
+int read_dir_1 = 1;
+int read_incr_2 = 0;
+int read_dir_2 = 1;
+
+int blink_time = millis();
+
 
 void servo_control()
 {
-    if (millis() - last_check > 500)
-    {
-        last_check = millis();
-        read_right_1 = !digitalRead(SERVO_1_RIGHT);
-        read_left_1 = !digitalRead(SERVO_1_LEFT);
-        read_right_2 = !digitalRead(SERVO_2_RIGHT);
-        read_left_2 = !digitalRead(SERVO_2_LEFT);
+    read_incr_1 = !digitalRead(SERVO_1_INCR);
+    read_dir_1 = !digitalRead(SERVO_1_DIR);
+    read_incr_2 = !digitalRead(SERVO_2_INCR);
+    read_dir_2 = !digitalRead(SERVO_2_DIR);
 
-        if (read_right_1 || read_left_1 || read_right_2 || read_left_2)
-        {
-            digitalWrite(LED, HIGH);
-            // Servo 1 logic
-            if (read_right_1 && modify_angle(&angle_servo_1, delta))
-                servo_1.write(angle_servo_1);
-            if (read_left_1 && modify_angle(&angle_servo_1, -delta))
-                servo_1.write(angle_servo_1);
-            // Servo 2 logic
-            if (read_right_2 && modify_angle(&angle_servo_2, delta))
-                servo_2.write(angle_servo_2);
-            if (read_left_2 && modify_angle(&angle_servo_2, -delta))
-                servo_2.write(angle_servo_2);
-        }
+    if (read_incr_1 && !last_read_incr_1)
+    {
+        blinkLed(millis());
+        if (read_dir_1)
+            modify_angle(&angle_servo_1, -delta);
         else
-            digitalWrite(LED, LOW);
+            modify_angle(&angle_servo_1, delta);
+        servo_1.write(angle_servo_1);
     }
+    if (read_incr_2 && !last_read_incr_2)
+    {
+        blinkLed(millis());
+        if (read_dir_2)
+            modify_angle(&angle_servo_2, -delta);
+        else
+            modify_angle(&angle_servo_2, delta);
+        servo_2.write(angle_servo_2);
+    }
+
+    last_read_incr_1 = read_incr_1;
+    last_read_incr_2 = read_incr_2;
+    blinkLed(0);
 }
 
-int modify_angle(int *angle, int delta)
+
+void modify_angle(int *angle, int delta)
 {
     *angle += delta;
     if (*angle > 180)
     {
         *angle = 180;
-        return (0);
+        return;
     }
     if (*angle < 0)
     {
         *angle = 0;
-        return (0);
+        return;
     }
-    return (1);
+    return;
+}
+
+
+void blinkLed(int t)
+{
+    if ((!t && millis() > blink_time + 1000) || !blink_time)
+    {
+        blink_time = 0;
+        digitalWrite(LED, LOW);
+    }
+    if (t)
+    {
+        digitalWrite(LED, HIGH);
+        blink_time = t;
+    }
 }

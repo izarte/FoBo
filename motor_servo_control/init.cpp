@@ -11,13 +11,13 @@ void init_servos()
     // Initialize Servo 1 varibles
     servo_1.attach(PIN_SERVO_1);
     servo_1.write(angle_servo_1);
-    pinMode(SERVO_1_RIGHT, INPUT_PULLUP);
-    pinMode(SERVO_1_LEFT, INPUT_PULLUP);
+    pinMode(SERVO_1_INCR, INPUT_PULLUP);
+    pinMode(SERVO_1_DIR, INPUT_PULLUP);
     // Initialize Servo 2 variables
     servo_2.attach(PIN_SERVO_2);
     servo_2.write(angle_servo_2);
-    pinMode(SERVO_2_RIGHT, INPUT_PULLUP);
-    pinMode(SERVO_2_LEFT, INPUT_PULLUP);
+    pinMode(SERVO_2_INCR, INPUT_PULLUP);
+    pinMode(SERVO_2_DIR, INPUT_PULLUP);
 }
 
 void init_motors()
