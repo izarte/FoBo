@@ -31,6 +31,7 @@ find_package(rosidl_default_generators REQUIRED)
 install(PROGRAMS 
   scripts/move_control.py
   scripts/camera_control.py
+  scripts/detect_camera.py
   DESTINATION lib/${PROJECT_NAME}/
 )
 
