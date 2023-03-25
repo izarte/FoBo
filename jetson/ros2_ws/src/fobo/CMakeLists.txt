@@ -29,6 +29,7 @@ ament_python_install_package(${PROJECT_NAME})
 find_package(rosidl_default_generators REQUIRED)
 
 install(PROGRAMS 
+  scripts/move_motors_control.py
   scripts/move_control.py
   scripts/camera_control.py
   scripts/detect_camera.py
@@ -38,6 +39,7 @@ install(PROGRAMS
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Velocity.msg"
   "msg/CameraPose.msg"
+  "msg/ServosPose.msg"
  )
 
 if(BUILD_TESTING)
