@@ -28,6 +28,12 @@ ament_python_install_package(${PROJECT_NAME})
 
 find_package(rosidl_default_generators REQUIRED)
 
+# install the launch directory
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 install(PROGRAMS 
   scripts/move_motors_control.py
   scripts/move_control.py
@@ -37,9 +43,10 @@ install(PROGRAMS
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Velocity.msg"
   "msg/CameraPose.msg"
+  "msg/ObjectPose.msg"
   "msg/ServosPose.msg"
+  "msg/Velocity.msg"
  )
 
 if(BUILD_TESTING)
