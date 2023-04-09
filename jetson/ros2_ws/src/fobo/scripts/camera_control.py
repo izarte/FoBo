@@ -10,7 +10,7 @@ from fobo.msg import ServosPose
 
 class Servo():
     def __init__(self, incr, direction):
-        self.delta = 10
+        self.delta = 3
         self.incr = incr
         self.direction = direction
         GPIO.setup(self.incr, GPIO.OUT, initial=GPIO.HIGH)
@@ -61,22 +61,29 @@ class CameraControl(Node):
             ObjectPose,
             'camera_control',
             self.read_camera_pose,
-            10
+            1
         )
         self.sub
-        self.range_pose_x = 10
-        self.range_pose_y = 10
+        self.range_pose_x = 100
+        self.range_pose_y = 300
+        self.time = time.time()
 
     def read_camera_pose(self, msg):
+        # if (time.time() * 1000 < self.time + 100):
+        #     return
         if msg.x > self.range_pose_x:
-            self.x_motor.incr_angle(1)
-        elif msg.x < -self.range_pose_x:
+            # self.time = time.time() * 1000
             self.x_motor.incr_angle(-1)
+            print("go right - ", msg.x)
+        elif msg.x < -self.range_pose_x:
+            # self.time = time.time() * 1000
+            print("go left - ", msg.x)
+            self.x_motor.incr_angle(1)
         
-        if msg.y > self.range_pose_y:
-            self.y_motor.incr_angle(1)
-        elif msg.y < -self.range_pose_y:
-            self.y_motor.incr_angle(-1)
+        # if msg.y > self.range_pose_y:
+        #     self.y_motor.incr_angle(1)
+        # elif msg.y < -self.range_pose_y:
+        #     self.y_motor.incr_angle(-1)
 
         self.servos_pose.servo_x = self.x_motor.get_angle()
         self.servos_pose.servo_y = self.y_motor.get_angle()

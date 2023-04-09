@@ -19,7 +19,7 @@ dir2_pin = 35
 GPIO.setup(dir2_pin, GPIO.OUT, initial=GPIO.HIGH)
 
 
-delta = 10
+delta = 3
 # Servo 1
 incr_pin_1 = 11
 dir_pin_1 = 12

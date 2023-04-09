@@ -15,7 +15,7 @@ class DetectCamera(Node):
             'camera_control',
             10
         )
-        timer_period = 0.5
+        timer_period = 0.1
         self.timer = self.create_timer(
             timer_period,
             self.timer_callback
@@ -81,8 +81,9 @@ class DetectCamera(Node):
             y_dif = y - frame.shape[0] / 2
             # 40 cm is w: 330 h: 192, area: 63360 hypotenuse: 381.79
             # distance1 = - (0.000130423) * (w * h) + 48.26
-            distance = 381.79 * 40 / math.sqrt(w**2 + h**2)
-        return (int(x_dif), int(y_dif), distance)
+            # distance = 381.79 * 40 / math.sqrt(w**2 + h**2)
+            distance = 560.89 * 60 / math.sqrt(w**2 + h**2)
+        return (int(x_dif), int(y_dif), float(distance))
 
 def main():
     rclpy.init()

@@ -55,7 +55,7 @@ while True:
 		distance2 = 381.79 * 40 / math.sqrt(w**2 + h**2)
 		# print(f"center: {x} {y}, width: {w} height: {h} area: {w * h} hypotenuse: {math.sqrt(w**2 + h**2)}")
 		# print(f"distance_area = {distance1} \t******\t distance_hypotenuse = {distance2}")
-
+		print("distance: ", math.sqrt(w**2 + h**2))
 	cv2.imshow('frame', frame)
 	cv2.imshow('mask', openning)
 	if cv2.waitKey(1) & 0xFF == ord('q'):

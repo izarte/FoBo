@@ -53,6 +53,7 @@ class MotorsControl(Node):
         self.velocity.angular = msg.angular
         left_wheel_speed = self.velocity.linear - ((self.L/2) * self.velocity.angular) / self.r
         right_wheel_speed = self.velocity.linear + ((self.L/2) * self.velocity.angular) / self.r
+        right_wheel_speed = -right_wheel_speed
         left_wheel_speed, right_wheel_speed = self.check_maxs(left_wheel_speed, right_wheel_speed)
         self.left_motor.set_speed(left_wheel_speed)
         self.right_motor.set_speed(right_wheel_speed)

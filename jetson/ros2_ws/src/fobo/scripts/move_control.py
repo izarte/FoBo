@@ -31,7 +31,7 @@ class FoboMovement(Node):
         )
         self.sub_servo
         self.sub_camera
-        self.desired_distance = 40 # cm
+        self.desired_distance = 60 # cm
         self.distance = 0
 
     def read_distance(self, msg):
@@ -44,6 +44,9 @@ class FoboMovement(Node):
             self.velocity.angular = int((msg.servo_x - 90) * 0.9) # vel = pose * 100 % / 90º			pose goes from 0 to 90
         elif msg.servo_x < 90:
             self.velocity.angular = int((msg.servo_x - 90) * 0.9) # vel = -pose * 100 % / 90º			pose goes from 0 to -90
+        # self.velocity.angular = 0
+        if self.velocity.linear == 0:
+            self.velocity.angular = 0
         self.pub.publish(self.velocity)
 
     def calculate_speed(self):

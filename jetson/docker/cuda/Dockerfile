@@ -21,9 +21,16 @@ RUN pip3 install --upgrade setuptools
 RUN python3 -m pip install --upgrade pip
 WORKDIR opencv-python
 RUN python3 setup.py bdist_wheel
-# RUN pip3 wheel . --verbose
-# RUN pip3 install opencv-python
-# RUN pip3 install --upgrade ffmpeg-python
+
+# Install ros2
+RUN apt-get update && apt-get install locales -y && apt-get install curl -y
+RUN locale-gen en_US en_US.UTF-8 && \
+    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
+    export LANG=en_US.UTF-8
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu bionic main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
+RUN apt-get update && apt-get install ros-dashing-desktop -y
+
 COPY siam-mot/apex /etc/apex
 WORKDIR /etc/apex
 RUN python3 setup.py install --cuda_ext --cpp_ext
@@ -31,7 +38,9 @@ COPY siam-mot/maskrcnn-benchmark /etc/maskrcnn-benchmark
 WORKDIR /etc/maskrcnn-benchmark
 RUN python3 setup.py build develop
 COPY siam-mot /siam-mot
-WORKDIR /
 COPY v3_plugin_api.py /usr/local/lib/python3.6/dist-packages/imageio/core/v3_plugin_api.py
 COPY dla34-ba72cf86.pth /root/.cache/torch/hub/checkpoints/dla34-ba72cf86.pth
 
+WORKDIR /
+COPY entrypoint.sh /entrypoint.sh
+CMD ["./entrypoint.sh", "/bin/bash"]
