@@ -41,7 +41,7 @@ const int PIN_SERVO_2 = 9;
 const int SERVO_2_INCR = 7;                    // Jetson 15 (194)
 const int SERVO_2_DIR = 8;                     // Jetson 16 (232)
 
-const int delta = 10;
+const int delta = 3;
 
 
 #endif
