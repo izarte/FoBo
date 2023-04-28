@@ -37,9 +37,10 @@ RUN python3 setup.py install --cuda_ext --cpp_ext
 COPY siam-mot/maskrcnn-benchmark /etc/maskrcnn-benchmark
 WORKDIR /etc/maskrcnn-benchmark
 RUN python3 setup.py build develop
-COPY siam-mot /siam-mot
+# COPY siam-mot /siam-mot
 COPY v3_plugin_api.py /usr/local/lib/python3.6/dist-packages/imageio/core/v3_plugin_api.py
 COPY dla34-ba72cf86.pth /root/.cache/torch/hub/checkpoints/dla34-ba72cf86.pth
+RUN apt update && apt install python3-colcon-common-extensions -y
 
 WORKDIR /
 COPY entrypoint.sh /entrypoint.sh
