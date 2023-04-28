@@ -4,7 +4,7 @@ from rclpy.node import Node
 import Jetson.GPIO as GPIO
 import time
 
-from fobo.msg import ObjectPose
+from geometry_msgs.msg import Vector3
 from fobo.msg import ServosPose
 
 
@@ -58,7 +58,7 @@ class CameraControl(Node):
             10
         )
         self.sub = self.create_subscription(
-            ObjectPose,
+            Vector3,
             'camera_control',
             self.read_camera_pose,
             1

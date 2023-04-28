@@ -5,7 +5,7 @@ import Jetson.GPIO as GPIO
 
 from fobo.msg import Velocity
 from fobo.msg import ServosPose
-from fobo.msg import ObjectPose
+from geometry_msgs.msg import Vector3
 
 
 class FoboMovement(Node):
@@ -24,7 +24,7 @@ class FoboMovement(Node):
             10
         )
         self.sub_camera = self.create_subscription(
-            ObjectPose,
+            Vector3,
             'camera_control',
             self.read_distance,
             10
@@ -35,7 +35,7 @@ class FoboMovement(Node):
         self.distance = 0
 
     def read_distance(self, msg):
-        self.distance = msg.distance
+        self.distance = msg.z
 
     def read_servos_pose(self, msg):
 

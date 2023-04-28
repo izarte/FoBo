@@ -37,6 +37,9 @@ class MotorsControl(Node):
         GPIO.setmode(GPIO.BOARD)
         self.left_motor = Motor(33, 31)
         self.right_motor = Motor(32, 35)
+        # self.left_motor = Motor(32, 35)
+        # self.right_motor = Motor(33, 31)
+
         self.velocity = Velocity()
         self.sub = self.create_subscription(
             Velocity,
