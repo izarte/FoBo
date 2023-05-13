@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from matplotlib import cm
+import math
 
 from maskrcnn_benchmark.structures.bounding_box import BoxList
 
@@ -61,15 +62,19 @@ class VisGenerator:
         bbox = results.bbox.detach().cpu().numpy()
         ids = results.get_field('ids').tolist()
         labels = results.get_field('labels').tolist()
-
-        center = (0, 0)
+        shape = frame.shape
+        center = (-1, -1)
         for i, entity_id in enumerate(ids):
             # color = self.colors[entity_id % self.num_colors]
             # class_name = self.class_names[labels[i] - 1]
             # text_width = len(class_name) * 20
             x1, y1, x2, y2 = (np.round(bbox[i, :])).astype(np.int)
             # print(x2, x1, y2, y1)
-            center = (int((x2 - x1) / 2) + x1, int((y2 - y1) / 2) + y1)
+            w = x2 - x1
+            h = y2 - y1
+            distance = math.sqrt(w**2 + h**2)
+            print("Distance: ", distance)
+            center = (int(w / 2) + x1, int(h / 2) + y1)
             # cv2.rectangle(frame, (x1, y1), (x2, y2), color, thickness=3)
             # cv2.putText(frame, str(entity_id), (x1 + 5, y1 + 40),
             #             cv2.FONT_HERSHEY_SIMPLEX, 1.5, color, thickness=3)

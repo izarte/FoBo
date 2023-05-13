@@ -1,0 +1,12 @@
+/usr/src/ros2_ws/install/fobo_yolo/lib/fobo_yolo/ros2_bridge.py
+/usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/package_run_dependencies/fobo_yolo
+/usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/parent_prefix_path/fobo_yolo
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/ament_prefix_path.sh
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/path.sh
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.bash
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.sh
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.zsh
+/usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/packages/fobo_yolo
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig.cmake
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig-version.cmake
+/usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/package.xml

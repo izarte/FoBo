@@ -3,8 +3,9 @@ import sys
 import cv2
 import rclpy
 from rclpy.node import Node
-# from sensor_msgs.msg import Image
-# from cv_bridge import CvBridge
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
+import time
 import numpy as np
 from geometry_msgs.msg import Vector3
 
@@ -19,11 +20,11 @@ from demos.video_iterator import build_video_iterator
 class DetectCamera(Node):
     def __init__(self):
         super().__init__('ReadCamera')
-        timer_period = 0.05
-        self.timer = self.create_timer(
-            timer_period,
-            self.timer_callback
-        )
+        # timer_period = 0.05
+        # self.timer = self.create_timer(
+        #     timer_period,
+        #     self.timer_callback
+        # )
         self.cap = cv2.VideoCapture(0)
         self.msg = Vector3()
         self.pub = self.create_publisher(
@@ -31,24 +32,24 @@ class DetectCamera(Node):
             'camera_control',
             10
         )
-        # self.bridge = CvBridge()
+        self.bridge = CvBridge()
         if not self.cap.isOpened():
             print("Can't open camera")
             exit()
 
+        self.pub_img = self.create_publisher(
+            Image,
+            'image_topic',
+            10
+        )
 
         self.vis_generator = VisGenerator(vis_height=1080)
-        # self.vis_writer = VisWriter(
-        #                     dump_video=False,
-        #                     out_path=None,
-        #                     file_name=None)
         self.tracker = DemoInference(
                         track_class='person',
                         vis_generator=self.vis_generator
                     )
+        print("START")
         self.detect_person()
-
-
 
     def __del__(self):
         self.cap.release()
@@ -58,26 +59,33 @@ class DetectCamera(Node):
 
     def detect_person(self):
         # Actually detect blue center and calculates its difference
+        t = time.time()
         ret, frame = self.cap.read()
         if not ret:
             print("Can't see")
 
             # convert image to message
-        # video_reader = build_video_iterator(frame)
-        # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        # results = list(self.tracker.process_frame_sequence(frame))
+        # g_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         results, center = self.tracker.process_frame_sequence(frame)
-        x_dif = int((center[0] - frame.shape[1]) / 2)
-        y_dif = int((center[1] - frame.shape[0]) / 2)
-        print(x_dif, y_dif)
+        if center[0] == -1:
+            x_dif = 0
+            y_dif = 0
+        else:
+            x_dif = int((center[0] - frame.shape[1]) / 2)
+            y_dif = int((center[1] - frame.shape[0]) / 2)
+        # print(x_dif, y_dif)
         # cv2.circle(results, (center[0], center[1]), 25, (0, 0, 255), -1)
         # cv2.circle(results, (int(results.shape[1] / 2), int(results.shape[0] / 2)), 25, (255, 255, 0), -1)
-        # msg = self.bridge.cv2_to_imgmsg(results, encoding='bgr8')
+        msg = self.bridge.cv2_to_imgmsg(results, encoding='bgr8')
+        self.pub_img.publish(
+            msg)
         self.msg.x = float(x_dif)
         self.msg.y = float(y_dif)
 
         # publish message
         self.pub.publish(self.msg)
+        print("Time: ", time.time() - t)
+        self.detect_person()
 
 def main():
     rclpy.init()

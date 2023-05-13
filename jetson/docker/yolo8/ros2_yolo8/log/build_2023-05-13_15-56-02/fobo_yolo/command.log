@@ -1,0 +1,6 @@
+Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake /usr/src/ros2_ws/src/fobo_yolo -DCMAKE_INSTALL_PREFIX=/usr/src/ros2_ws/install/fobo_yolo
+Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake /usr/src/ros2_ws/src/fobo_yolo -DCMAKE_INSTALL_PREFIX=/usr/src/ros2_ws/install/fobo_yolo
+Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo -- -j4 -l4
+Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo -- -j4 -l4
+Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo --target install -- -j4 -l4
+Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo --target install -- -j4 -l4

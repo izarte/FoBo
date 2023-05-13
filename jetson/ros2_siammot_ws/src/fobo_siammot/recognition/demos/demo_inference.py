@@ -75,6 +75,7 @@ class DemoInference:
 
         # frame is RGB-Channel
         frame = Image.fromarray(frame, 'RGB')
+        frame = frame.resize((127, 127))
         
         dummy_bbox = torch.tensor([[0, 0, 1, 1], [0, 0, 1, 1]])
         dummy_boxlist = BoxList(dummy_bbox, frame.size, mode='xywh')
