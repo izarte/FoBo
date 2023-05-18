@@ -9,13 +9,13 @@ from fobo.msg import ServosPose
 
 
 class Servo():
-    def __init__(self, incr, direction):
-        self.delta = 3
+    def __init__(self, incr, direction, delta=3, initial_angle=90):
+        self.delta = delta
         self.incr = incr
         self.direction = direction
         GPIO.setup(self.incr, GPIO.OUT, initial=GPIO.HIGH)
         GPIO.setup(self.direction, GPIO.OUT, initial=GPIO.HIGH)
-        self.angle = 90
+        self.angle = initial_angle
     
     def incr_angle(self, direction):
         angle = self.angle + direction * self.delta
@@ -50,7 +50,7 @@ class CameraControl(Node):
         super().__init__('CameraControl')
         GPIO.setmode(GPIO.BOARD)
         self.x_motor = Servo(11, 12)
-        self.y_motor = Servo(15, 16)
+        self.y_motor = Servo(15, 16, delta=2, initial_angle=70)
         self.servos_pose = ServosPose()
         self.pub = self.create_publisher(
             ServosPose,
@@ -64,8 +64,9 @@ class CameraControl(Node):
             1
         )
         self.sub
-        self.range_pose_x = 100
-        self.range_pose_y = 300
+        self.range_pose_x = 120
+        self.range_pose_y = 20
+        self.objective_pose_y = 60
         self.time = time.time()
 
     def read_camera_pose(self, msg):
@@ -80,10 +81,10 @@ class CameraControl(Node):
             print("go left - ", msg.x)
             self.x_motor.incr_angle(1)
         
-        # if msg.y > self.range_pose_y:
-        #     self.y_motor.incr_angle(1)
-        # elif msg.y < -self.range_pose_y:
-        #     self.y_motor.incr_angle(-1)
+        if self.objective_pose_y - msg.y > self.range_pose_y:
+            self.y_motor.incr_angle(-1)
+        elif msg.y - self.objective_pose_y > self.range_pose_y:
+            self.y_motor.incr_angle(1)
 
         self.servos_pose.servo_x = self.x_motor.get_angle()
         self.servos_pose.servo_y = self.y_motor.get_angle()
