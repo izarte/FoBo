@@ -14,7 +14,7 @@ class DetectPerson():
         if not self.cap.isOpened():
             print("Can't open camera")
             exit()
-        self.model = YOLO("yolov8n.pt")
+        self.model = YOLO("yolov8n.onnx")
         # self.ws = create_connection("ws://localhost:8000/")
         self.data = {'x': 0, 'y': 0}
         self.detect_person()
@@ -29,18 +29,18 @@ class DetectPerson():
 
     def detect_person(self):
         # Actually detect blue center and calculates its difference
-        t = time.time()
+        # t = time.time()
         ret, frame = self.cap.read()
         if not ret:
             print("Can't see")
 
         result = self.model.track(
             source=frame,
-            agnostic_nms=True,
+            # agnostic_nms=True,
             classes=0,
             device=0,
             format='onnx',
-            tracker="botsort.yaml",
+            # tracker="botsort.yaml",
             show=False,
             show_labels=False,
             verbose=False,
@@ -57,7 +57,7 @@ class DetectPerson():
             self.data = {'x': 0, 'y': 0}
         # print(self.data['x'], self.data['y'])
 
-        print("FPS: ", 1 / (time.time() - t))
+        # print("FPS: ", 1 / (time.time() - t))
         self.send_data()
         self.detect_person()
 
