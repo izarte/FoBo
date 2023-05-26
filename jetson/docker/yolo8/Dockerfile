@@ -54,7 +54,7 @@ RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o
 RUN apt-get update && apt-get install ros-dashing-desktop -y
 RUN apt update && apt install python3-colcon-common-extensions -y
 
-ADD https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt /usr/src/ros2_ws/
+COPY yolov8n.onnx /usr/src/ros2_ws/yolov8n.onnx
 
 WORKDIR /
 COPY entrypoint.sh /entrypoint.sh

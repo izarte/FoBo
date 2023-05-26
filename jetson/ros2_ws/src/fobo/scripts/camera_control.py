@@ -19,13 +19,19 @@ class Servo():
     
     def incr_angle(self, direction):
         angle = self.angle + direction * self.delta
+        # if angle > 180:
+        #     angle = 180
+        # elif angle < 0:
+        #     angle = 0
+        self.set_angle(angle)
+        
+    def set_angle(self, angle=0, incr=0):
+        if incr != 0:
+            angle = self.angle + incr * self.delta
         if angle > 180:
             angle = 180
         elif angle < 0:
             angle = 0
-        self.set_angle(angle)
-        
-    def set_angle(self, angle):
         while(self.angle != angle):
             if angle > self.angle:
                 GPIO.output(self.direction, 1)
@@ -72,6 +78,10 @@ class CameraControl(Node):
     def read_camera_pose(self, msg):
         # if (time.time() * 1000 < self.time + 100):
         #     return
+        # if abs(msg.x) > self.range_pose_x:
+        #     incremental = -(msg.x // 50)
+        #     print(incremental)
+        #     self.x_motor.set_angle(incr=incremental)
         if msg.x > self.range_pose_x:
             # self.time = time.time() * 1000
             self.x_motor.incr_angle(-1)
