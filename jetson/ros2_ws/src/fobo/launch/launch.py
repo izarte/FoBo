@@ -6,14 +6,14 @@ def generate_launch_description():
 
     nodes = []
 
-    # nodes.append(
-    #     Node(
-    #     package="fobo",
-    #     executable="detect_camera.py",
-    #     name="detect_camera",
-    #     output="screen"
-    #     )
-    # )
+    nodes.append(
+        Node(
+        package="fobo",
+        executable="read_depth_camera.py",
+        name="read_depth_camera",
+        output="screen"
+        )
+    )
     
     nodes.append(
         Node(
