@@ -54,7 +54,7 @@ class DetectPerson():
                 self.data['x'] = x - frame.shape[1] / 2
                 self.data['y'] = y - frame.shape[0] / 2
             else:
-                self.data = {'x': 0, 'y': 60}
+                self.data = {'x': -1, 'y': -1}
             # print(self.data['x'], self.data['y'])
 
             # print("FPS: ", 1 / (time.time() - t))
