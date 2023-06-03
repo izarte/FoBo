@@ -5,9 +5,6 @@ extern Servo servo_2;
 extern int angle_servo_1;
 extern int angle_servo_2;
 
-int last_servo_1 = millis();
-int last_servo_2 = millis();
-
 int last_read_incr_1 = 1;
 int last_read_incr_2 = 1;
 
@@ -30,19 +27,22 @@ void servo_control()
     {
         blinkLed(millis());
         if (read_dir_1)
-            modify_angle(&angle_servo_1, -delta);
+            modify_angle(&angle_servo_1, -delta_x);
         else
-            modify_angle(&angle_servo_1, delta);
+            modify_angle(&angle_servo_1, delta_x);
         servo_1.write(angle_servo_1);
+        Serial.println(angle_servo_1);
     }
+
     if (read_incr_2 && !last_read_incr_2)
     {
         blinkLed(millis());
         if (read_dir_2)
-            modify_angle(&angle_servo_2, -delta);
+            modify_angle(&angle_servo_2, -delta_y);
         else
-            modify_angle(&angle_servo_2, delta);
+            modify_angle(&angle_servo_2, delta_y);
         servo_2.write(angle_servo_2);
+        Serial.println(angle_servo_2);
     }
 
     last_read_incr_1 = read_incr_1;

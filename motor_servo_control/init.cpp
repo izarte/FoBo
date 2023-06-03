@@ -4,7 +4,7 @@
 Servo servo_1;
 Servo servo_2;
 int angle_servo_1 = 90;
-int angle_servo_2 = 90;
+int angle_servo_2 = 70;
 
 void init_servos()
 {

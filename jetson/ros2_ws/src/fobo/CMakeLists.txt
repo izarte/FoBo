@@ -38,7 +38,7 @@ install(PROGRAMS
   scripts/move_motors_control.py
   scripts/move_control.py
   scripts/camera_control.py
-  scripts/detect_camera.py
+  scripts/read_depth_camera.py
   DESTINATION lib/${PROJECT_NAME}/
 )
 

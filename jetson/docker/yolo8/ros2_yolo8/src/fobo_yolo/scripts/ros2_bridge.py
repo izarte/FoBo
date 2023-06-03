@@ -35,7 +35,7 @@ class DetectCamera(Node):
         # print(data['x'])
         self.msg.x = float(data['x'])
         self.msg.y = float(data['y'])
-        self.msg.z = 0.0
+        self.msg.z = 0.0 if data['x'] == -1 and data['y'] == -1 else 1.0 
         self.pub.publish(self.msg)
 
 

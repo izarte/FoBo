@@ -13,7 +13,7 @@ class Motor():
         self.dir = direction
         self.dc = 0
         GPIO.setup(self.dir, GPIO.OUT, initial=GPIO.HIGH)
-        GPIO.output(self.dir, GPIO.HIGH)
+        GPIO.output(self.dir, GPIO.LOW)
         self.pwm.start(self.dc)
 
     def __del__(self):
@@ -22,10 +22,10 @@ class Motor():
     def set_speed(self, dc):
         self.dc = dc
         if self.dc < 0:
-            GPIO.output(self.dir, GPIO.LOW)
+            GPIO.output(self.dir, GPIO.HIGH)
             self.dc = -self.dc
         else:
-            GPIO.output(self.dir, GPIO.HIGH)
+            GPIO.output(self.dir, GPIO.LOW)
         if self.dc > 100:
             self.dc = 100
         self.pwm.ChangeDutyCycle(self.dc)

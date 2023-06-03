@@ -19,7 +19,8 @@ dir2_pin = 35
 GPIO.setup(dir2_pin, GPIO.OUT, initial=GPIO.HIGH)
 
 
-delta = 3
+delta_x = 3
+delta_y = 2
 # Servo 1
 incr_pin_1 = 11
 dir_pin_1 = 12
@@ -32,7 +33,7 @@ incr_pin_2 = 15
 dir_pin_2 = 16
 GPIO.setup(incr_pin_2, GPIO.OUT, initial=GPIO.HIGH)
 GPIO.setup(dir_pin_2, GPIO.OUT, initial=GPIO.HIGH)
-angle_2 = 90
+angle_2 = 70
 
 
 print("Interface to control 2 steppers and 2 servos")
@@ -97,14 +98,14 @@ try:
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_1, 1)
                     time.sleep(10 / 1000)
-                    angle_1 += delta
+                    angle_1 += delta_x
                 else:
                     GPIO.output(dir_pin_1, 0)
                     GPIO.output(incr_pin_1, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_1, 1)
                     time.sleep(10 / 1000)
-                    angle_1 -= delta
+                    angle_1 -= delta_x
                 print(angle_1)
 
         # Servo 2 logic
@@ -118,14 +119,14 @@ try:
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_2, 1)
                     time.sleep(10 / 1000)
-                    angle_2 += delta
+                    angle_2 += delta_y
                 else:
                     GPIO.output(dir_pin_2, 0)
                     GPIO.output(incr_pin_2, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_2, 1)
                     time.sleep(10 / 1000)
-                    angle_2 -= delta
+                    angle_2 -= delta_y
                 print(angle_2)
 
 

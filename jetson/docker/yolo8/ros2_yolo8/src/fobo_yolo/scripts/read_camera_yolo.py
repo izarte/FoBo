@@ -14,7 +14,7 @@ class DetectPerson():
         if not self.cap.isOpened():
             print("Can't open camera")
             exit()
-        self.model = YOLO("yolov8n.pt")
+        self.model = YOLO("yolov8n.onnx")
         # self.ws = create_connection("ws://localhost:8000/")
         self.data = {'x': 0, 'y': 0}
         self.detect_person()
@@ -22,31 +22,44 @@ class DetectPerson():
     def __del__(self):
         self.cap.release()
 
-    def detect_person(self):
-        # Actually detect blue center and calculates its difference
-        t = time.time()
+    def send_data(self):
         ws = create_connection("ws://localhost:8000/")
-        ret, frame = self.cap.read()
-        if not ret:
-            print("Can't see")
-
-        result = model.track(frame, agnostic_nms=True, show=False, device=0, classes=0, tracker="botsort.yaml")[0]
-        boxes = result.boxes.cpu()
-        if boxes:
-            x = int(boxes.xyxy[0][0] + ((boxes.xyxy[0][2] - boxes.xyxy[0][0]).item() / 2))
-            y = int(boxes.xyxy[0][1] + ((boxes.xyxy[0][3] - boxes.xyxy[0][1]).item() / 2))
-            print(x, y)
-            self.data['x'] = x - frame.shape[1] / 2
-            self.data['y'] = y - frame.shape[0] / 2
-        else:
-            self.data = {'x': 0, 'y': 0}
-        print(self.data['x'], self.data['y'])
-
-        # self.ws.send(json.dumps(self.data))
         ws.send(json.dumps(self.data))
         ws.close()
-        print("Time: ", time.time() - t)
-        self.detect_person()
+
+    def detect_person(self):
+        # Actually detect blue center and calculates its difference
+        # t = time.time()
+        while (True):
+            ret, frame = self.cap.read()
+            if not ret:
+                print("Can't see")
+
+            result = self.model.track(
+                source=frame,
+                # task='detect',
+                agnostic_nms=True,
+                classes=0,
+                device=0,
+                format='onnx',
+                # tracker="botsort.yaml",
+                half=True,
+                verbose=False,
+            )[0]
+            boxes = result.boxes.cpu()
+            if result.boxes.id is not None:
+                x = int(boxes.xyxy[0][0] + ((boxes.xyxy[0][2] - boxes.xyxy[0][0]).item() / 2))
+                y = int(boxes.xyxy[0][1] + ((boxes.xyxy[0][3] - boxes.xyxy[0][1]).item() / 2))
+                # print(x, y)
+                self.data['x'] = x - frame.shape[1] / 2
+                self.data['y'] = y - frame.shape[0] / 2
+            else:
+                self.data = {'x': -1, 'y': -1}
+            # print(self.data['x'], self.data['y'])
+
+            # print("FPS: ", 1 / (time.time() - t))
+            self.send_data()
+        # self.detect_person()
 
 def main():
     try:
