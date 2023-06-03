@@ -4,14 +4,10 @@
 
 #include <Servo.h>
 #include <Arduino.h>
-#include <Wire.h>
-#include "MPU6050.h"
-#include <PID_v1.h>
 
 // init.cpp
 void init_servos();
 void init_motors();
-void init_gyro();
 
 // servo.cpp
 void servo_control();
@@ -20,18 +16,8 @@ void blinkLed(int t);
 
 // Stepper
 void motors_control();
-int checkLimits(int value, int min, int max);
-
-// Gyro
-void read_yaw();
-void calibrateSensor();
 
 const int LED = 13;
-
-// PID constants
-const double KP = 2;
-const double KI = 5;
-const double KD = 1;
 
 // Motor 1 constant pins
 const int MOTOR_1_STEP = 5;
@@ -54,7 +40,8 @@ const int PIN_SERVO_2 = 9;
 const int SERVO_2_INCR = 7;                    // Jetson 15 (194)
 const int SERVO_2_DIR = 8;                     // Jetson 16 (232)
 
-const int delta = 3;
+const int delta_x = 3;
+const int delta_y = 2;
 
 
 #endif

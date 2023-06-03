@@ -2,13 +2,12 @@
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115200);
     pinMode(LED, OUTPUT);
     digitalWrite(LED, LOW);
 
     init_servos();
     init_motors();
-    init_gyro();
 }
 
 void loop()

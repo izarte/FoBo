@@ -4,18 +4,7 @@
 Servo servo_1;
 Servo servo_2;
 int angle_servo_1 = 90;
-int angle_servo_2 = 90;
-
-MPU6050 mpu;
-float gyroZOffset = 0.0;
-float yaw = 0.0;
-
-//Define Variables we'll be connecting to
-double Setpoint = 0.0, Input, Output;
-
-//Specify the links and initial tuning parameters
-double Kp=3, Ki=0, Kd=0.2;
-PID movement_PID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
+int angle_servo_2 = 70;
 
 void init_servos()
 {
@@ -48,16 +37,4 @@ void init_motors()
     pinMode(MOTOR_2_DIRECTION_INPUT, INPUT_PULLUP);
     digitalWrite(MOTOR_2_STEP, LOW);
     digitalWrite(MOTOR_2_DIRECTION, HIGH);
-
-    movement_PID.SetMode(AUTOMATIC);
-}
-
-void init_gyro()
-{
-    // Initialize the MPU-6050
-    Wire.begin();
-    mpu.initialize();
-  
-    // Calibrate the sensor
-    calibrateSensor();
 }
