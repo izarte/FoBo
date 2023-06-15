@@ -4,15 +4,16 @@
 int speed_input_1 = 0;
 int step_state_1 = 0;
 unsigned long prev_time_1 = micros();
-int step_delay_1 = 600;
+unsigned long step_delay_1 = 600;
 
 // Variables initialaztion for motor 2
 int speed_input_2 = 0;
 int step_state_2 = 0;
 unsigned long prev_time_2 = micros();
-int step_delay_2 = 600;
+unsigned long step_delay_2 = 600;
 
 unsigned long actual_time = micros();
+
 
 void motors_control()
 {

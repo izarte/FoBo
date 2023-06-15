@@ -17,7 +17,6 @@ void blinkLed(int t);
 // Stepper
 void motors_control();
 
-
 const int LED = 13;
 
 // Motor 1 constant pins
