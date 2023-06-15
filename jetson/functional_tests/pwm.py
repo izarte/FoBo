@@ -94,6 +94,7 @@ try:
             while(angle_1 != angle):
                 if angle > angle_1:
                     GPIO.output(dir_pin_1, 1)
+                    time.sleep(1 / 1000)
                     GPIO.output(incr_pin_1, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_1, 1)
@@ -101,6 +102,7 @@ try:
                     angle_1 += delta_x
                 else:
                     GPIO.output(dir_pin_1, 0)
+                    time.sleep(1 / 1000)
                     GPIO.output(incr_pin_1, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_1, 1)
@@ -115,6 +117,7 @@ try:
             while(angle_2 != angle):
                 if angle > angle_2:
                     GPIO.output(dir_pin_2, 2)
+                    time.sleep(1 / 1000)
                     GPIO.output(incr_pin_2, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_2, 1)
@@ -122,6 +125,7 @@ try:
                     angle_2 += delta_y
                 else:
                     GPIO.output(dir_pin_2, 0)
+                    time.sleep(1 / 1000)
                     GPIO.output(incr_pin_2, 0)
                     time.sleep(10 / 1000)
                     GPIO.output(incr_pin_2, 1)
@@ -132,8 +136,7 @@ try:
 
 except KeyboardInterrupt:
     print("Ctl C pressed - ending program")
+    pwm1.stop()                         # stop PWM
+    pwm2.stop()                         # stop PWM
 
-pwm1.stop()                         # stop PWM
-pwm2.stop()                         # stop PWM
-
-GPIO.cleanup()                     # resets GPIO ports used back to 
+    GPIO.cleanup()                     # resets GPIO ports used back to 
