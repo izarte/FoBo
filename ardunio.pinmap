@@ -1,11 +1,11 @@
 SERVO 1:
     pin 3 -> servo controller
-    pin 2 -> right direction input
-    pin 4 -> left direction input
+    pin 2 -> incremental pin
+    pin 4 -> direction input
 SERVO 2:
     pin 9 -> servo controller
-    pin 7 -> right direction input
-    pin 8 -> left direction input
+    pin 7 -> incremental pin
+    pin 8 -> direction input
 
 MOTOR 1:
     pin A0 -> speed input
