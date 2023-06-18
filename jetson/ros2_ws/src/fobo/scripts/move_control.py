@@ -45,7 +45,6 @@ class FoboMovement(Node):
         self.depth_turn = msg.obstacles
 
     def read_servos_pose(self, msg):
-        # print("puta")
         # self.velocity.linear = self.calculate_speed()
         if msg.servo_x > self.desired_servo_1:
             self.velocity.angular = int((msg.servo_x - self.desired_servo_1) * 100 / 90) # vel = pose * 100 % / 90º			pose goes from 0 to 90
