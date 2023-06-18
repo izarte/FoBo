@@ -25,7 +25,6 @@ WORKDIR /usr/src/yolov8
 RUN python3.8 -m pip install -r requirements.txt
 RUN python3.8 -m pip install ultralytics
 RUN python3.8 -m pip install lap==0.4.0 websocket-client
-RUN python3.6 -m pip install websockets
 
 # Install onxxruntime_gpu adapted to this version
 COPY onnxruntime_gpu-1.6.0-cp38-cp38-linux_aarch64.whl /tmp
@@ -44,25 +43,9 @@ RUN   apt-get install gcc-8 g++-8 -y && \
       apt-get install cmake -y && \
       python3.8 -m pip install onnx onnxsim
 
-# Install ros2
-RUN apt-get update && apt-get install locales -y && apt-get install curl -y
-RUN locale-gen en_US en_US.UTF-8 && \
-    update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
-    export LANG=en_US.UTF-8
-RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu bionic main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
-RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
-RUN apt-get update && apt-get install ros-dashing-desktop -y
-RUN apt update && apt install python3-colcon-common-extensions -y
+WORKDIR /usr/src
 
-COPY yolov8n.onnx /usr/src/ros2_ws/yolov8n.onnx
+COPY read_camera_yolo.py ./read_camera_yolo.py
+COPY yolov8n.onnx ./yolov8n.onnx
 
-WORKDIR /
-COPY entrypoint.sh /entrypoint.sh
-RUN /bin/bash -c "/entrypoint.sh"
-COPY ros2_yolo8 /usr/src/ros2_ws
-WORKDIR /usr/src/ros2_ws
-RUN /bin/bash -c "/entrypoint.sh" "colcon build"
-
-WORKDIR /
-COPY start_yolo.sh /start_yolo.sh
-CMD ["./start_yolo.sh"]
+CMD ["./read_camera_yolo.py"]

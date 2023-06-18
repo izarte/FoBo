@@ -1,0 +1,6 @@
+Jetson.GPIO==2.0.20
+numpy==1.24.2
+opencv-python==4.7.0.72
+smbus==1.1.post2
+simple-pid==2.0.0
+websockets==9.1
