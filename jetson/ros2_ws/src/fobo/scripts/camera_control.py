@@ -4,7 +4,7 @@ from rclpy.node import Node
 import Jetson.GPIO as GPIO
 import time
 
-from geometry_msgs.msg import Vector3
+from fobo.msg import CameraData
 from fobo.msg import ServosPose
 
 
@@ -15,17 +15,21 @@ class Servo():
         self.direction = direction
         GPIO.setup(self.incr, GPIO.OUT, initial=GPIO.HIGH)
         GPIO.setup(self.direction, GPIO.OUT, initial=GPIO.HIGH)
-        self.angle = initial_angle
+        self.initial_angle = initial_angle
+        self.angle = self.initial_angle
         self.min = minimum
         self.max = maximum
-      
+
+    def reset_position(self):
+        self.set_angle(angle=self.initial_angle)
+
     def set_angle(self, angle=0, incr=0):
         if incr != 0:
             angle = self.angle + incr * self.delta
-        if angle > self.maximum:
-            angle = 180
-        elif angle < self.minimum:
-            angle = 0
+        if angle > self.max:
+            angle = self.max
+        elif angle < self.min:
+            angle = self.min
         while(self.angle != angle):
             if angle > self.angle:
                 GPIO.output(self.direction, 1)
@@ -65,7 +69,7 @@ class CameraControl(Node):
         #     self.read_camera_pose
         # )
         self.sub = self.create_subscription(
-            Vector3,
+            CameraData,
             'camera_control',
             self.read_camera_pose,
             1
@@ -79,28 +83,29 @@ class CameraControl(Node):
 
     def read_camera_pose(self, msg):
         # Check if person is not detected
-        # if msg.z == 0.0:
-        self.find_objective()
-        # else:
-            # self.move_servos(msg)
+        if msg.visible == 0.0:
+            self.find_objective()
+        else:
+            self.move_servos(msg)
         # Publish actual servos pose
         self.servos_pose.servo_x = self.x_motor.get_angle()
         self.servos_pose.servo_y = self.y_motor.get_angle()
         self.pub.publish(self.servos_pose)
 
     def find_objective(self):
+        self.y_motor.reset_position()
         if self.last_view == 'left':
-            print('left')
+            # print('left')
             self.x_motor.set_angle(incr=1)
             if self.x_motor.get_angle() == 180:
                 self.last_view = 'right'
-            time.sleep(10 / 1000)
+            # time.sleep(10 / 1000)
         elif self.last_view == 'right':
-            print('right')
+            # print('right')
             self.x_motor.set_angle(incr=-1)
             if self.x_motor.get_angle() == 0:
                 self.last_view = 'left'
-            time.sleep(10 / 1000)
+            # time.sleep(10 / 1000)
     
     def move_servos(self, msg):
         # Check pose to trun camera in x axis

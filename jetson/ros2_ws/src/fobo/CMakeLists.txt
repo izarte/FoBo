@@ -39,12 +39,14 @@ install(PROGRAMS
   scripts/move_control.py
   scripts/camera_control.py
   scripts/read_depth_camera.py
+  scripts/read_imu.py
+  scripts/camera_bridge.py
   DESTINATION lib/${PROJECT_NAME}/
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/CameraPose.msg"
-  "msg/ObjectPose.msg"
+  "msg/CameraData.msg"
+  "msg/Depth.msg"
   "msg/ServosPose.msg"
   "msg/Velocity.msg"
  )
