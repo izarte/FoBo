@@ -4,6 +4,8 @@ Fobo is a robot whose main task is to follow you to carry your heavy weights.
 
 It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which, using [YOLOv8] can detect and track people in its image. The camera will follow the objective person and the robot will move based on the servomotor's position. The robot also has a depth camera used to avoid obstacles.
 
+![real]
+
 # Model
 All Fobo chassis have been modeled to be printed in a 3d printer. The total model can be found in [full-model]. To make the printing process easier divided model can be found in [divided-full-model].
 
@@ -49,6 +51,7 @@ docker compose up
 ```
 
 [YOLOv8]: https://github.com/ultralytics/ultralytics
+[real]: https://github.com/izarte/FoBo/blob/main/images/real_robot.jpeg
 [full-model]: https://github.com/izarte/FoBo/tree/main/model/full_model
 [divided-full-model]: https://github.com/izarte/FoBo/tree/main/model/divided_full_model
 [final-real-pieces]: https://github.com/izarte/FoBo/tree/main/model/final_real_pieces
