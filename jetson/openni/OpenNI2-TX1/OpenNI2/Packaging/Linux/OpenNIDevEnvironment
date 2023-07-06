@@ -1,0 +1,2 @@
+export OPENNI2_INCLUDE=/folder/OpenNI2-TX1/OpenNI2/Packaging/Linux/Include
+export OPENNI2_REDIST=/folder/OpenNI2-TX1/OpenNI2/Packaging/Linux/Redist

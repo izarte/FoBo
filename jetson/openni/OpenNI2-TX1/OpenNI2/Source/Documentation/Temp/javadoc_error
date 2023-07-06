@@ -1,0 +1,95 @@
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:30: error: package android.app does not exist
+import android.app.PendingIntent;
+                  ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:31: error: package android.content does not exist
+import android.content.BroadcastReceiver;
+                      ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:32: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:33: error: package android.content does not exist
+import android.content.Intent;
+                      ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:34: error: package android.content does not exist
+import android.content.IntentFilter;
+                      ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:35: error: package android.hardware.usb does not exist
+import android.hardware.usb.UsbDevice;
+                           ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:36: error: package android.hardware.usb does not exist
+import android.hardware.usb.UsbManager;
+                           ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:37: error: package android.util does not exist
+import android.util.Log;
+                   ^
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:59: error: cannot find symbol
+	private Context mAndroidContext;
+	        ^
+  symbol:   class Context
+  location: class OpenNIHelper
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:88: error: cannot find symbol
+	public OpenNIHelper(Context context) {
+	                    ^
+  symbol:   class Context
+  location: class OpenNIHelper
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:143: error: cannot find symbol
+	public UsbDevice getUsbDevice(String uri) {
+	       ^
+  symbol:   class UsbDevice
+  location: class OpenNIHelper
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:157: error: cannot find symbol
+	public UsbDevice getUsbDevice(DeviceInfo deviceInfo) {
+	       ^
+  symbol:   class UsbDevice
+  location: class OpenNIHelper
+../../Wrappers/java/src/org/openni/android/OpenNIHelper.java:182: error: cannot find symbol
+	private final BroadcastReceiver mUsbReceiver = new BroadcastReceiver() {
+	              ^
+  symbol:   class BroadcastReceiver
+  location: class OpenNIHelper
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:25: error: package javax.microedition.khronos.egl does not exist
+import javax.microedition.khronos.egl.EGLConfig;
+                                     ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:26: error: package javax.microedition.khronos.opengles does not exist
+import javax.microedition.khronos.opengles.GL10;
+                                          ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:28: error: package android.content does not exist
+import android.content.Context;
+                      ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:29: error: package android.graphics does not exist
+import android.graphics.Color;
+                       ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:30: error: package android.opengl does not exist
+import android.opengl.GLES10;
+                     ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:31: error: package android.opengl does not exist
+import android.opengl.GLES11;
+                     ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:32: error: package android.opengl does not exist
+import android.opengl.GLES11Ext;
+                     ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:33: error: package android.opengl does not exist
+import android.opengl.GLSurfaceView;
+                     ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:34: error: package android.util does not exist
+import android.util.AttributeSet;
+                   ^
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:41: error: cannot find symbol
+public class OpenNIView extends GLSurfaceView {
+                                ^
+  symbol: class GLSurfaceView
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:64: error: cannot find symbol
+	public OpenNIView(Context context) {
+	                  ^
+  symbol:   class Context
+  location: class OpenNIView
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:68: error: cannot find symbol
+	public OpenNIView(Context context, AttributeSet attrs) {
+	                  ^
+  symbol:   class Context
+  location: class OpenNIView
+../../Wrappers/java/src/org/openni/android/OpenNIView.java:68: error: cannot find symbol
+	public OpenNIView(Context context, AttributeSet attrs) {
+	                                   ^
+  symbol:   class AttributeSet
+  location: class OpenNIView
