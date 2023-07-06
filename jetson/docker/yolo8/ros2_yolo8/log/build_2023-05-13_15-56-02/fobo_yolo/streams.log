@@ -1,0 +1,63 @@
+[0.064s] Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake /usr/src/ros2_ws/src/fobo_yolo -DCMAKE_INSTALL_PREFIX=/usr/src/ros2_ws/install/fobo_yolo
+[0.876s] -- The C compiler identification is GNU 7.5.0
+[1.290s] -- The CXX compiler identification is GNU 7.5.0
+[1.309s] -- Check for working C compiler: /usr/bin/cc
+[1.549s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.555s] -- Detecting C compiler ABI info
+[1.793s] -- Detecting C compiler ABI info - done
+[1.814s] -- Detecting C compile features
+[2.520s] -- Detecting C compile features - done
+[2.531s] -- Check for working CXX compiler: /usr/bin/c++
+[2.795s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.797s] -- Detecting CXX compiler ABI info
+[3.069s] -- Detecting CXX compiler ABI info - done
+[3.087s] -- Detecting CXX compile features
+[4.239s] -- Detecting CXX compile features - done
+[4.256s] -- Found ament_cmake: 0.7.6 (/opt/ros/dashing/share/ament_cmake/cmake)
+[4.377s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[4.378s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.253s] -- Found rclcpp: 0.7.16 (/opt/ros/dashing/share/rclcpp/cmake)
+[5.356s] -- Found rosidl_adapter: 0.7.10 (/opt/ros/dashing/share/rosidl_adapter/cmake)
+[5.549s] -- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)
+[5.556s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.560s] -- Looking for pthread.h
+[5.825s] -- Looking for pthread.h - found
+[5.831s] -- Looking for pthread_create
+[6.082s] -- Looking for pthread_create - not found
+[6.082s] -- Looking for pthread_create in pthreads
+[6.301s] -- Looking for pthread_create in pthreads - not found
+[6.302s] -- Looking for pthread_create in pthread
+[6.545s] -- Looking for pthread_create in pthread - found
+[6.549s] -- Found Threads: TRUE  
+[6.687s] -- Found rclpy: 0.7.11 (/opt/ros/dashing/share/rclpy/cmake)
+[6.695s] -- Found rosidl_default_generators: 0.7.0 (/opt/ros/dashing/share/rosidl_default_generators/cmake)
+[7.060s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1") 
+[7.166s] -- Found FastRTPS: /opt/ros/dashing/include  
+[7.426s] -- Found ament_lint_auto: 0.7.12 (/opt/ros/dashing/share/ament_lint_auto/cmake)
+[7.790s] -- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+[7.798s] -- Added test 'flake8' to check Python code syntax and style conventions
+[7.801s] -- Added test 'lint_cmake' to check CMake code style
+[7.803s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[7.808s] -- Added test 'xmllint' to check XML markup files
+[7.821s] -- Configuring done
+[7.828s] -- Generating done
+[7.834s] -- Build files have been written to: /usr/src/ros2_ws/build/fobo_yolo
+[7.846s] Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake /usr/src/ros2_ws/src/fobo_yolo -DCMAKE_INSTALL_PREFIX=/usr/src/ros2_ws/install/fobo_yolo
+[7.856s] Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo -- -j4 -l4
+[8.011s] Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo -- -j4 -l4
+[8.133s] Invoking command in '/usr/src/ros2_ws/build/fobo_yolo': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo --target install -- -j4 -l4
+[8.318s] [36mInstall the project...[0m
+[8.352s] -- Install configuration: ""
+[8.353s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/lib/fobo_yolo/ros2_bridge.py
+[8.355s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/package_run_dependencies/fobo_yolo
+[8.356s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/parent_prefix_path/fobo_yolo
+[8.356s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/ament_prefix_path.sh
+[8.357s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/path.sh
+[8.358s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.bash
+[8.362s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.sh
+[8.363s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.zsh
+[8.363s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/packages/fobo_yolo
+[8.364s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig.cmake
+[8.364s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig-version.cmake
+[8.365s] -- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/package.xml
+[8.371s] Invoked command in '/usr/src/ros2_ws/build/fobo_yolo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/dashing /usr/bin/cmake --build /usr/src/ros2_ws/build/fobo_yolo --target install -- -j4 -l4

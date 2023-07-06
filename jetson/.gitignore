@@ -1,0 +1,10 @@
+venv
+ros2_ws/src/turtlebot3
+ros2_ws/src/utils
+ros2_ws/build/
+ros2_ws/install/*
+ros2_ws/log/
+
+ros2_siammot_ws/build/
+ros2_siammot_ws/install/*
+ros2_siammot_ws/log/

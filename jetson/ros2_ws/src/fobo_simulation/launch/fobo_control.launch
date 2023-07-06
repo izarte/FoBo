@@ -1,0 +1,12 @@
+<launch>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam command="load" file="$(find fobo_simulation)/config/fobo.yaml" />
+
+  <!-- load the controllers -->
+  <node pkg="controller_manager" type="controller_manager" name="controller_manager" output="screen" args="load joint1_position_controller joint_state_controller" />
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <remapping from="/joint_states" to="/fobo/joint_states" />
+  </node>
+</launch>

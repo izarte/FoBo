@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="fobo" xmlns:xacro="http://ros.org/wiki/xacro">
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+
+    <link name="base_footprint"/>
+
+    <joint name="base_joint" type="fixed">
+      <parent>base_footprint</parent>
+      <child>base_link</child>
+      <pose>0.0 0.0 0.000 0 0 0</pose>
+    </joint>
+
+    <link name="base_link">
+      <visual name="base_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://own/meshes/total_model.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+
+
+      <collision name="base_collision">
+        <pose>0.1175 0.5 0.5 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0. 0. 0.</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <joint name="wheel_left_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_left_link</child>
+      <pose>0.235 0.4 0.05 0 1.57 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_left_link">
+      <collision name="wheel_left_collision">
+        <pose>0.235 0.4 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <!-- This friction pamareter don't contain reliable data!! -->
+          <friction>
+            <ode>
+              <mu>100000.0</mu>
+              <mu2>100000.0</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+5</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="wheel_left_visual">
+        <pose>0.235 0.4 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+
+    <joint name="wheel_right_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_right_link</child>
+      <pose>0.01 0.4 0.05 0 1.57 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_right_link">
+      <collision name="wheel_right_collision">
+        <pose>0.01 0.4 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <!-- This friction pamareter don't contain reliable data!! -->
+          <friction>
+            <ode>
+              <mu>100000.0</mu>
+              <mu2>100000.0</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+5</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="wheel_right_visual">
+        <pose>0.01 0.4 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+
+    <joint name="wheel_front_joint" type="revolute">
+      <parent>base_link</parent>
+      <child>wheel_front_link</child>
+      <pose>0.1157 0.08 0.05 0 1.57 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <link name="wheel_front_link">
+      <collision name="wheel_front_collision">
+        <pose>0.1157 0.08 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <!-- This friction pamareter don't contain reliable data!! -->
+          <friction>
+            <ode>
+              <mu>100000.0</mu>
+              <mu2>100000.0</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0.0</slip1>
+              <slip2>0.0</slip2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+5</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="wheel_front_visual">
+        <pose>0.1157 0.08 0.05 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.033</radius>
+            <length>0.018</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+
+  </model>
+</sdf>

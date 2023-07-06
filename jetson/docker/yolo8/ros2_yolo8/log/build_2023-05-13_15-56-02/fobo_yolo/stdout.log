@@ -1,0 +1,57 @@
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.7.6 (/opt/ros/dashing/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 0.7.16 (/opt/ros/dashing/share/rclcpp/cmake)
+-- Found rosidl_adapter: 0.7.10 (/opt/ros/dashing/share/rosidl_adapter/cmake)
+-- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found rclpy: 0.7.11 (/opt/ros/dashing/share/rclpy/cmake)
+-- Found rosidl_default_generators: 0.7.0 (/opt/ros/dashing/share/rosidl_default_generators/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1") 
+-- Found FastRTPS: /opt/ros/dashing/include  
+-- Found ament_lint_auto: 0.7.12 (/opt/ros/dashing/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /usr/src/ros2_ws/build/fobo_yolo
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/lib/fobo_yolo/ros2_bridge.py
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/package_run_dependencies/fobo_yolo
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/parent_prefix_path/fobo_yolo
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/ament_prefix_path.sh
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/environment/path.sh
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.bash
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.sh
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/local_setup.zsh
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/ament_index/resource_index/packages/fobo_yolo
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig.cmake
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/cmake/fobo_yoloConfig-version.cmake
+-- Installing: /usr/src/ros2_ws/install/fobo_yolo/share/fobo_yolo/package.xml
