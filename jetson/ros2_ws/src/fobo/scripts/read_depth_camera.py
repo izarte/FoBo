@@ -52,7 +52,7 @@ class DetectDepthCamera(Node):
         frame_depth = self.depth_stream.read_frame()
         frame_depth_data = frame_depth.get_buffer_as_uint16()
         depth_array = np.ndarray((frame_depth.height, frame_depth.width), dtype=np.uint16, buffer=frame_depth_data)
-        depth_center = depth_center = depth_array[HEIGHT // 3:2 * HEIGHT // 3, WIDTH // 3: 2 * WIDTH // 3]
+        depth_center = depth_array[HEIGHT // 3:2 * HEIGHT // 3, WIDTH // 3: 2 * WIDTH // 3]
         depth_array = depth_array[HEIGHT // 3:2 * HEIGHT // 3]
         
         distance = np.mean(depth_center)

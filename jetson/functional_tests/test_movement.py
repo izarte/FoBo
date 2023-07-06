@@ -37,31 +37,31 @@ right_motor = Motor(32, 35)
 
 
 
-# Move forward
-left_motor.set_speed(20)
+# # Move forward
+# left_motor.set_speed(20)
+# right_motor.set_speed(20)
+# time.sleep(4)
+
+# # Turn
+# left_motor.set_speed(20)
+# right_motor.set_speed(50)
+# time.sleep(2)
+
+# # Move backrward
+# left_motor.set_speed(-10)
+# right_motor.set_speed(-10)
+# time.sleep(2)
+
+left_motor.set_speed(0)
 right_motor.set_speed(20)
 time.sleep(4)
 
-# Turn
-left_motor.set_speed(20)
-right_motor.set_speed(50)
-time.sleep(2)
 
-# Move backrward
-left_motor.set_speed(-10)
-right_motor.set_speed(-10)
-time.sleep(2)
 
-# pwm1.ChangeDutyCycle(10)
-# pwm2.ChangeDutyCycle(50)
-# pwm2.ChangeDutyCycle(0)
-# pwm1.ChangeDutyCycle(10)
-# GPIO.setup(dir1_pin, GPIO.OUT, initial=GPIO.HIGH)
-# time.sleep(2)
-# GPIO.setup(dir2_pin, GPIO.OUT, initial=GPIO.LOW)
-# pwm1.ChangeDutyCycle(10)
-# pwm2.ChangeDutyCycle(10)
-# time.sleep(2)
+left_motor.set_speed(0)
+right_motor.set_speed(0)
+
+
 
 # pwm1.stop()
 # pwm2.stop()

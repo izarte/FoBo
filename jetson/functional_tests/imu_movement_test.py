@@ -117,9 +117,10 @@ yaw = 0
 pid.output_limits = (-50, 50)  # Set the output limits of the PID controller
 pid.setpoint = 0  # Set the desired setpoint for the PID controller (0 for forward movement)
 
-speed = 20
+speed = 10
 try:
-    while True:
+    t = time.time()
+    while time.time() < t + 5:
         current_time = time.monotonic()
 
         gyro_z = read_raw_data(GYRO_ZOUT_H)
@@ -140,6 +141,9 @@ try:
         prev_time = current_time
         time.sleep(0.01)  # Delay between readings
 except KeyboardInterrupt:
-    del(left_motor)
-    del(right_motor)
-    GPIO.cleanup()
+    pass
+left_motor.set_speed(0)
+right_motor.set_speed(0)
+del(left_motor)
+del(right_motor)
+GPIO.cleanup()

@@ -36,6 +36,7 @@ install(DIRECTORY
 
 install(PROGRAMS 
   scripts/move_motors_control.py
+  scripts/move_avoid.py
   scripts/move_control.py
   scripts/camera_control.py
   scripts/read_depth_camera.py

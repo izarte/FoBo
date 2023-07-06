@@ -24,6 +24,16 @@ def generate_launch_description():
         )
     )
 
+    # nodes.append(
+    #     Node(
+    #     package="fobo",
+    #     executable="move_avoid.py",
+    #     name="move_avoid",
+    #     output="screen"
+    #     )
+    # )
+
+
     nodes.append(
         Node(
         package="fobo",
