@@ -1,0 +1,34 @@
+warning: Tag `SYMBOL_CACHE_SIZE' at line 356 of file `Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `XML_SCHEMA' at line 1430 of file `Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag `XML_DTD' at line 1436 of file `Doxyfile' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+error: When enabling GENERATE_HTMLHELP the tree view (GENERATE_TREEVIEW) should be disabled. I'll do it for you.
+warning: doxygen no longer ships with the FreeSans font.
+You may want to clear or change DOT_FONTNAME.
+Otherwise you run the risk that the wrong font is being used for dot generated graphs.
+warning: source Images is not a readable file or directory... skipping.
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Source/Documentation/Text/Conventions.txt:26: warning: unable to resolve reference to `openni::OpenNI::addListener()' for \ref command
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:1305: warning: unable to resolve reference to `OpenNI::Listener' for \ref command
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:1306: warning: unable to resolve reference to `OpenNI::Listener::onDeviceConnected' for \ref command
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2299: warning: argument 'char' of command @param is not found in the argument list of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2299: warning: argument 'int' of command @param is not found in the argument list of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2307: warning: The following parameters of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize) are not documented:
+  parameter 'strFileName'
+  parameter 'nBufferSize'
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2326: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogConsoleOutput(bool bConsoleOutput)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2333: warning: The following parameters of openni::OpenNI::setLogConsoleOutput(bool bConsoleOutput) are not documented:
+  parameter 'bConsoleOutput'
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2339: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogFileOutput(bool bFileOutput)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2346: warning: The following parameters of openni::OpenNI::setLogFileOutput(bool bFileOutput) are not documented:
+  parameter 'bFileOutput'
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2313: warning: argument 'int' of command @param is not found in the argument list of openni::OpenNI::setLogMinSeverity(int nMinSeverity)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2320: warning: The following parameters of openni::OpenNI::setLogMinSeverity(int nMinSeverity) are not documented:
+  parameter 'nMinSeverity'
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2286: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogOutputFolder(const char *strLogOutputFolder)
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:2293: warning: The following parameters of openni::OpenNI::setLogOutputFolder(const char *strLogOutputFolder) are not documented:
+  parameter 'strLogOutputFolder'
+/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Include/OpenNI.h:823: warning: unable to resolve reference to `VideoStream::Listener' for \ref command
+sh: 1: C:\Program Files (x86)\HTML Help Workshop\hhc.exe: not found
+error: failed to run html help compiler on index.hhp

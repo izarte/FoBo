@@ -1,0 +1,2 @@
+export OPENNI2_INCLUDE=/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Packaging/OpenNI-Linux-Arm-2.3/Include
+export OPENNI2_REDIST=/home/jetson/fobo/jetson/openni/OpenNI2-TX1/OpenNI2/Packaging/OpenNI-Linux-Arm-2.3/Redist
