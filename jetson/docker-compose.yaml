@@ -3,7 +3,7 @@ services:
   ros2:
     image: inigo183/ros2:foxy-arm64
     volumes:
-      - ../ros2_ws:/ros2_ws
+      - ros2_ws:/ros2_ws
       - /dev/bus/usb:/dev/bus/usb
     container_name: ros2
     network_mode: "host"
@@ -13,7 +13,7 @@ services:
   ros2_depth_camera:
     image: inigo183/ros2:foxy-arm64
     volumes:
-      - ../ros2_ws:/ros2_ws
+      - ros2_ws:/ros2_ws
       - /usr/lib/OpenNI2:/ros2_ws/OpenNI2:ro
       - /usr/lib/libOpenNI2.so:/ros2_ws/libOpenNI2.so:ro
       - /dev/bus/usb:/dev/bus/usb
