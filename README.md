@@ -6,7 +6,7 @@ It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which
 
 # Demo
 Real demostration video:
-[![video]([real])(https://www.youtube.com/watch?v=TPPlmqCqAJ4D)
+[![video]([real])](https://www.youtube.com/watch?v=TPPlmqCqAJ4D)
 
 # Model
 All Fobo chassis have been modeled to be printed in a 3d printer. The total model can be found in [full-model]. To make the printing process easier divided model can be found in [divided-full-model].
