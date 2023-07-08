@@ -1,34 +1,35 @@
 version: "3.0"
 services:
   ros2:
-    image: inigo183/ros2:foxy-arm64
+    image: inigo183/fobo:ros2_core
     volumes:
-      - ros2_ws:/ros2_ws
+      - ./ros2_ws:/ros2_ws
       - /dev/bus/usb:/dev/bus/usb
     container_name: ros2
-    network_mode: "host"
+    # network_mode: "host"
     privileged: true
     command: "'source /ros2_ws/install/setup.bash && ros2 launch fobo launch.py'"
 
-  ros2_depth_camera:
-    image: inigo183/ros2:foxy-arm64
-    volumes:
-      - ros2_ws:/ros2_ws
-      - /usr/lib/OpenNI2:/ros2_ws/OpenNI2:ro
-      - /usr/lib/libOpenNI2.so:/ros2_ws/libOpenNI2.so:ro
-      - /dev/bus/usb:/dev/bus/usb
-    container_name: depth
-    privileged: true
-    command: "'source /ros2_ws/install/setup.bash && ros2 run fobo read_depth_camera.py'"
+  # Commeted due to missing power to execute all code and read depth camera in real time
+  # ros2_depth_camera:
+  #   image: inigo183/ros2:foxy-arm64
+  #   volumes:
+  #     - ./ros2_ws:/ros2_ws
+  #     - /usr/lib/OpenNI2:/ros2_ws/OpenNI2
+  #     - /usr/lib/libOpenNI2.so:/ros2_ws/libOpenNI2.so
+  #     - /dev/bus/usb:/dev/bus/usb
+  #   container_name: depth
+  #   privileged: true
+  #   command: "'source /ros2_ws/install/setup.bash && ros2 run fobo read_depth_camera.py'"
 
   yolov8:
-    image: inigo183/yolo8
+    image: inigo183/fobo:yolo8
     depends_on:
       - ros2
     environment:
       - LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
     container_name: yolo8
-    network_mode: "host"
+    # network_mode: "host"
     privileged: true
     deploy:
       resources:

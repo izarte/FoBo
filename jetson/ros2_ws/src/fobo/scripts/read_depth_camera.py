@@ -11,6 +11,7 @@ from fobo.msg import Depth
 HEIGHT = 480
 WIDTH = 640
 
+
 class DetectDepthCamera(Node):
     def __init__(self):
         super().__init__('ReadDepthCamera')
@@ -88,6 +89,7 @@ def main():
         rclpy.spin(node)
     except KeyboardInterrupt:
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

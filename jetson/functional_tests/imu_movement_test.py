@@ -89,6 +89,15 @@ def check_limits(value, minimum, maximum):
         return (maximum)
     return (value)
 
+def control_speeds(left, right, control_signal):
+    left = check_limits(left + control_signal, 0, 100)
+    right = check_limits(right - control_signal, 0, 100)
+
+    if left < 5 or right < 5:
+        left += 15
+        right += 15
+    return left, right
+
 GPIO.setmode(GPIO.BOARD)
 left_motor = Motor(33, 31, invert=True)
 right_motor = Motor(32, 35)
@@ -130,8 +139,8 @@ try:
 
         control_signal = pid(yaw)
 
-        left_speed = check_limits(speed + control_signal, 0, 100)
-        right_speed = check_limits(speed - control_signal, 0, 100)
+        left_speed, right_speed = control_speeds(speed, speed, control_signal)
+
         print("left: ", left_speed, " right: ", right_speed)
         left_motor.set_speed(left_speed)
         right_motor.set_speed(right_speed)

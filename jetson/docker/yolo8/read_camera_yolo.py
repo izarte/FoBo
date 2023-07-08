@@ -51,8 +51,8 @@ class DetectPerson():
                 x = int(boxes.xyxy[0][0] + ((boxes.xyxy[0][2] - boxes.xyxy[0][0]).item() / 2))
                 y = int(boxes.xyxy[0][1] + ((boxes.xyxy[0][3] - boxes.xyxy[0][1]).item() / 2))
                 # print(x, y)
-                self.data['x'] = x - frame.shape[1] / 2
-                self.data['y'] = y - frame.shape[0] / 2
+                self.data['x'] = x - frame.shape[1] // 2
+                self.data['y'] = y - frame.shape[0] // 2
             else:
                 self.data = {'x': -1, 'y': -1}
             # print(self.data['x'], self.data['y'])

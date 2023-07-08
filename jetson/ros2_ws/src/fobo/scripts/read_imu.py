@@ -5,7 +5,6 @@ import time
 import smbus
 import simple_pid
 
-
 from std_msgs.msg import Float32
 
 #some MPU6050 Registers and their Address
@@ -19,27 +18,19 @@ GYRO_ZOUT_H  = 0x43
 # GYRO_ZOUT_H  = 0x47
 Device_Address = 0x68 
 
-
-class IMUReader(Node):
+"""
+Class to calibrate, check well working, read imu and calculate yaw
+"""
+class IMU():
     def __init__(self):
-        super().__init__('FoboMovement')
         self.offset = 0
-        self.yaw = 0
+        self.yaw = 0.0
+        self.last_yaw = 0.0
         self.bus = smbus.SMBus(1)
         self.MPU_Init()
         self.calibrate()
         self.prev_time = time.monotonic()
-        self.msg = Float32()
-        self.pub = self.create_publisher(
-            Float32,
-            'yaw_orientation',
-            10
-        )
-        timer_period = 0.01
-        self.timer = self.create_timer(
-            timer_period,
-            self.timer_callback
-        )
+
 
     def MPU_Init(self):
         #write to sample rate register
@@ -79,19 +70,67 @@ class IMUReader(Node):
 
         prev_time = time.monotonic()
         self.offset = self.offset / num_samples
-
-    def timer_callback(self):
-        self.read_yaw()
-        self.msg.data = self.yaw
-        self.pub.publish(self.msg)
-
-    def read_yaw(self):
+    
+    def update_yaw(self):
         current_time = time.monotonic()
 
         gyro_z = self.read_raw_data(GYRO_ZOUT_H)
         Gz = (gyro_z - self.offset) / 131.0
         self.yaw = self.yaw + (Gz * (current_time - self.prev_time))
         self.prev_time = current_time
+        if abs(self.last_yaw - self.yaw) < 0.001:
+            self.yaw = self.last_yaw
+        self.last_yaw = self.yaw
+    
+    def get_yaw(self):
+        return self.yaw
+
+    def test_IMU(self):
+        num_samples = 100
+        for _ in range(num_samples):
+            self.update_yaw()
+            time.sleep(0.01)
+        if abs(self.yaw) > 0.01:
+            return 1
+        return 0
+
+
+"""
+Ros2 node to execute imu code
+Subs:
+
+Pubs:
+    yaw_orientation
+"""
+class IMUReader(Node):
+    def __init__(self):
+        super().__init__('FoboMovement')
+
+        self.yaw = 0
+        self.imu = IMU()
+        self.msg = Float32()
+        self.pub = self.create_publisher(
+            Float32,
+            'yaw_orientation',
+            10
+        )
+        while self.imu.test_IMU():
+            self.imu = IMU()
+        print("DONE")
+        timer_period = 0.1
+        self.timer = self.create_timer(
+            timer_period,
+            self.timer_callback
+        )
+
+    def timer_callback(self):
+        try:
+            self.imu.update_yaw()
+            self.yaw = self.imu.get_yaw()
+        except:
+            self.yaw = self.yaw
+        self.msg.data = self.yaw
+        self.pub.publish(self.msg)
 
     
 def main():

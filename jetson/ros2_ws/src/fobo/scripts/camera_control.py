@@ -8,6 +8,9 @@ from fobo.msg import CameraData
 from fobo.msg import ServosPose
 
 
+"""
+Class to control servo (based on pin communication with Arduino)
+"""
 class Servo():
     def __init__(self, incr, direction, delta=3, initial_angle=90, minimum=0, maximum=180):
         self.delta = delta
@@ -47,10 +50,18 @@ class Servo():
                 GPIO.output(self.incr, 1)
                 time.sleep(10 / 1000)
                 self.angle -= self.delta
-    
+            time.sleep(10 / 1000)    
     def get_angle(self):
         return (self.angle)
 
+
+"""
+Ros2 node to control servo position based on person distance between image center
+Subs:
+    camera_control
+Pubs:
+    servos_pose
+"""
 class CameraControl(Node):
     def __init__(self):
         super().__init__('CameraControl')
@@ -63,11 +74,6 @@ class CameraControl(Node):
             'servos_pose',
             10
         )
-        # timer_period = 0.1
-        # self.timer = self.create_timer(
-        #     timer_period,
-        #     self.read_camera_pose
-        # )
         self.sub = self.create_subscription(
             CameraData,
             'camera_control',
@@ -134,6 +140,7 @@ def main():
     except KeyboardInterrupt:
         rclpy.shutdown()
         GPIO.cleanup()
+
 
 if __name__ == '__main__':
     main()
