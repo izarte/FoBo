@@ -6,7 +6,7 @@ It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which
 
 # Demo
 Real demostration video (click on image of real FoBo):
-[![Alt text]([real])](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
+[![Demo](https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg)](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
 
 
 # Model
@@ -57,7 +57,6 @@ docker compose up
 
 
 [YOLOv8]: https://github.com/ultralytics/ultralytics
-[real]: https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg
 [full-model]: https://github.com/izarte/FoBo/tree/main/model/full_model
 [divided-full-model]: https://github.com/izarte/FoBo/tree/main/model/divided_full_model
 [final-real-pieces]: https://github.com/izarte/FoBo/tree/main/model/final_real_pieces
