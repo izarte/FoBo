@@ -4,7 +4,9 @@ Fobo is a robot whose main task is to follow you to carry your heavy weights.
 
 It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which, using [YOLOv8] can detect and track people in its image. The camera will follow the objective person and the robot will move based on the servomotor's position. The robot also has a depth camera used to avoid obstacles.
 
-![real]
+# Demo
+Real demostration video:
+[![video]([real)](https://www.youtube.com/watch?v=TPPlmqCqAJ4D)
 
 # Model
 All Fobo chassis have been modeled to be printed in a 3d printer. The total model can be found in [full-model]. To make the printing process easier divided model can be found in [divided-full-model].
@@ -49,10 +51,6 @@ After OpeNI installation, go to [jetson] folder and execute:
 ```
 docker compose up
 ```
-
-# Demo
-Real demostration video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TPPlmqCqAJ4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
