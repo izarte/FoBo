@@ -50,6 +50,12 @@ After OpeNI installation, go to [jetson] folder and execute:
 docker compose up
 ```
 
+# Demo
+Real demostration video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TPPlmqCqAJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
 [YOLOv8]: https://github.com/ultralytics/ultralytics
 [real]: https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg
 [full-model]: https://github.com/izarte/FoBo/tree/main/model/full_model
