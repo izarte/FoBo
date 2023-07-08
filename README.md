@@ -51,11 +51,11 @@ docker compose up
 ```
 
 [YOLOv8]: https://github.com/ultralytics/ultralytics
-[real]: https://github.com/izarte/FoBo/blob/main/images/real_robot.jpeg
+[real]: https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg
 [full-model]: https://github.com/izarte/FoBo/tree/main/model/full_model
 [divided-full-model]: https://github.com/izarte/FoBo/tree/main/model/divided_full_model
 [final-real-pieces]: https://github.com/izarte/FoBo/tree/main/model/final_real_pieces
-[circuit]: https://github.com/izarte/FoBo/blob/main/connections/circuit.jpg
+[circuit]: https://github.com/izarte/FoBo/blob/main/gallery/connections/circuit.jpg
 [arduino]: https://github.com/izarte/FoBo/tree/main/arduino
 [openni]: https://github.com/izarte/FoBo/tree/main/jetson/openni/OpenNI2-TX1/OpenNI2
 [OpenNI2]: https://github.com/mikeh9/OpenNI2-TX1/tree/master/OpenNI2
