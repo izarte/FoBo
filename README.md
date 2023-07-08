@@ -5,8 +5,8 @@ Fobo is a robot whose main task is to follow you to carry your heavy weights.
 It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which, using [YOLOv8] can detect and track people in its image. The camera will follow the objective person and the robot will move based on the servomotor's position. The robot also has a depth camera used to avoid obstacles.
 
 # Demo
-Real demostration video:
-[![Alt text](https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg)](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
+Real demostration video (click on image of real FoBo):
+[![Alt text]([real])](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
 
 
 # Model
