@@ -6,7 +6,7 @@ It is based on a webcam with 2 degrees of freedom thanks to 2 servomotors, which
 
 # Demo
 Real demostration video (click on image of real FoBo):
-[![Demo](https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpeg)](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
+[![Demo](https://github.com/izarte/FoBo/blob/main/gallery/images/real_robot.jpg)](https://www.youtube.com/watch?v=TPPlmqCqAJ4)
 
 
 # Model
